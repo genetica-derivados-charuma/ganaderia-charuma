@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/innovacion.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Sevillana&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gravitas+One&display=swap" rel="stylesheet">
+
+    <title>Document</title>
+</head>
+<body>
+    <nav class="nav-container">
+        <section class="nav">
+            <!-- Logo -->
+            <a href="../" class="logo-link">
+            <img class="logo" src="../images/logoi.png" alt="Logo" />
+            </a>
+
+            <!-- Lista de navegación centrada -->
+            <ul class="nav-ul" id="navMenu">
+                <li><a href="../" class="nav-link">Inicio</a></li>
+                <li><a href="../nosotros/" class="nav-link">Conócenos</a></li>
+                <li><a href="../productos/" class="nav-link">Productos</a></li>
+                <li><a href="/innovacion/" class="nav-link active">Recetas</a></li>
+                <li><a href="../contacto/" class="nav-link">Contacto</a></li>
+            </ul>
+            <!-- Login / Registro / Carrito alineado a la derecha -->
+            <div class="nav-actions">
+                <!-- Perfil con menú desplegable -->
+                <div class="profile-menu">
+                    <button class="profile-btn" aria-label="Perfil">
+                    👤 <span class="arrow-down">▼</span>
+                    </button>
+                    <div class="profile-dropdown">
+                        <a href="./login/" class="nav-link">Iniciar sesión</a>
+                        <a href="./registro/" class="nav-link">Registrarse</a>
+                    </div>
+                </div>
+                <!-- Carrito afuera -->
+                <a href="./carrito/" class="nav-link a carrito-icon">
+                🛒
+                <span class="cart-count">10</span>
+                </a>
+
+            </div>
+
+            <!-- Botón hamburguesa (opcional para móvil) -->
+            <button class="nav-toggle" aria-label="Abrir menú" id="hamburgerBtn">
+                <span class="hamburger"></span>
+            </button>
+        </section>
+    </nav>
+
+    <div id="menuOverlay" class="menu-overlay"></div>
+
+    <!--! innovacion inicio -->
+
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1>Cocina fácil, sabrosa y con mucho queso</h1>
+        <p>Sabor andino en cada receta, con el queso como estrella principal.</p>
+      </div>
+    </div>
+  </section>
+
+<div class="container">
+
+  <!-- Card 1 -->
+  <div class="card" >
+    <div class="con-img">
+      <img src="../images/quesofrito1.jpg" alt="Queso frito">
+    </div>
+
+    <div class="card-content">
+      <span class="tag">Almuerzo</span>
+      <h3 class="h3">Queso frito con papas nativas</h3>
+      <div class="info">⏱️  20 min| 🔥 Fácil</div>
+      <div class="extras">
+        <span class="stars">⭐⭐⭐</span>
+      </div>
+      <p class="description">Crujiente por fuera y suave por dentro, acompañado con papas andinas y salsas caseras.</p>
+      <div class="con-btn">
+        <a class="btn" onclick="openModal('modal1')">Ver Receta</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card 2 -->
+  <div class="card">
+    <div class="con-img">
+      <img src="../images/chupe-verde.jpg" alt="Papa rellena">
+    </div>
+    
+    <div class="card-content">
+      <span class="tag">Almuerzo</span>
+      <h3 class="h3">Chupe de queso</h3>
+      <div class="info">⏱️ 40 min | 🔥 Media</div>
+      <div class="extras">
+        <span class="stars">⭐⭐⭐⭐</span>
+      </div>
+      <p class="description">Sopa cremosa a base de leche, papas y queso fresco serrano, típica de Huancayo y Ayacucho.</p>
+      <div class="con-btn">
+        <a class="btn" onclick="openModal('modal2')">Ver Receta</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card 3 -->
+  <div class="card">
+    <div class="con-img">
+      <img src="../images/queso-con-miel3.JPG" alt="Postre de queso">
+    </div>
+    
+    <div class="card-content">
+      <span class="tag">Postre</span>
+      <h3 class="h3">Queso con miel de caña</h3>
+      <div class="info">⏱️ 15 min | 🔥 Fácil</div>
+      <div class="extras">
+        <span class="stars">⭐⭐⭐⭐</span>
+      </div>
+      <p class="description">Lonjas de queso artesanal bañadas con miel de chancaca, un postre dulce y rústico.</p>
+      <div class="con-btn">
+        <a class="btn" onclick="openModal('modal3')">Ver Receta</a>
+      </div>
+    </div>
+  </div>
+ <!-- Card 4 -->
+  <div class="card">
+    <div class="con-img">
+      <img src="../images/quinua.jpg" alt="Postre de queso">
+    </div>
+    <div class="card-content">
+      <span class="tag">Desayuno</span>
+      <h3 class="h3">Ensalada de queso serrano con quinua</h3>
+      <div class="info">⏱️ 25 min | 🔥 Fácil</div>
+      <div class="extras">
+        <span class="stars">⭐⭐</span>
+      </div>
+      <p class="description">Fresca y nutritiva, mezcla de quinua cocida, verduras y cubitos de queso artesanal.</p>
+      <div class="con-btn">
+        <a class="btn" onclick="openModal('modal4')">Ver Receta</a>
+      </div>
+    </div>
+  </div>
+<!-- Card 5 -->
+  <div class="card">
+    <div class="con-img">
+      <img src="../images/pastel-de-papa5.jpg" alt="Postre de queso">
+    </div>
+    <div class="card-content">
+      <span class="tag">Almuerzo</span>
+      <h3 class="h3">Pastel de papa con queso</h3>
+      <div class="info">⏱️ 35 min | 🔥 Medio</div>
+      <div class="extras">
+        <span class="stars">⭐⭐⭐⭐</span>
+      </div>
+      <p class="description">Capas de papa andina con relleno de queso derretido, ideal para reuniones familiares.</p>
+      <div class="con-btn">
+        <a class="btn" onclick="openModal('modal5')">Ver Receta</a>
+      </div>
+    </div>
+  </div>
+<!-- Card 6 -->
+  <div class="card">
+    <div class="con-img">
+      <img src="../images/tamal-6.webp" alt="Postre de queso">
+    </div>
+    <div class="card-content">
+      <span class="tag">Desayuno</span>
+      <h3 class="h3">Tamal de queso</h3>
+      <div class="info">⏱️ 50 min | 🔥 Dificil</div>
+      <div class="extras">
+        <span class="stars">⭐⭐⭐⭐⭐</span>
+      </div>
+      <p class="description">Masa de maíz rellena con queso fresco, cocida al vapor en hojas de maíz o plátano.</p>
+      <div class="con-btn">
+        <a class="btn" onclick="openModal('modal6')">Ver Receta</a>
+      </div>
+    </div>
+  </div>
+<!-- Card 7 -->
+  <div class="card">
+    <div class="con-img">
+      <img src="../images/helado-7.webp" alt="Postre de queso">
+    </div>
+      <div class="card-content">
+      <span class="tag">Postre</span>
+      <h3 class="h3">Queso helado artesanal</h3>
+      <div class="info">⏱️ 2 hrs (congelación)  | 🔥 Fácil</div>
+      <div class="extras">
+        <span class="stars">⭐⭐⭐⭐</span>
+      </div>
+      <p class="description">Postre arequipeño hecho con leche y ralladuras de queso artesanal, servido bien frío.</p>
+      <div class="con-btn">
+        <a class="btn" onclick="openModal('modal7')">Ver Receta</a>
+      </div>
+    </div>
+  </div> 
+<!-- Card 8 -->
+  <div class="card">
+    <div class="con-img">
+      <img src="../images/choclo8.jpeg" alt="Postre de queso">
+    </div>
+      <div class="card-content">
+      <span class="tag">Almuerzo</span>
+      <h3 class="h3">Choclo con queso andino</h3>
+      <div class="info">⏱️ 20 min | 🔥 Fácil</div>
+      <div class="extras">
+        <span class="stars">⭐⭐⭐⭐⭐</span>
+      </div>
+      <p class="description">Clásico plato serrano: mazorca cocida con trozos de queso fresco, acompañado con ají molido.</p>
+      <div class="con-btn">
+        <a class="btn" onclick="openModal('modal8')">Ver Receta</a>
+      </div>
+      
+    </div>
+  </div>
+  
+
+</div>
+
+<!--! Modal (oculto por defecto) -->
+<div id="modal1" class="modal">
+  <div class="modal-content">
+      <span class="close" onclick="closeModal('modal1')">SALIR</span>
+
+    <img class="modal-img" src="../images/quesofrito.webp" alt="Plato terminado">
+
+    <div class="modal-text">
+      <h2>Queso Frito Andino</h2>
+
+      <section class="ingredients">
+        <h3>🧂 Ingredientes:</h3>
+        <ul>
+          <li>200g de queso fresco andino</li>
+          <li>2 huevos</li>
+          <li>Pan rallado</li>
+          <li>Aceite vegetal</li>
+          <li>Sal al gusto</li>
+        </ul>
+      </section>
+
+      <section class="steps">
+        <h3>👨‍🍳 Paso a paso:</h3>
+        <ol>
+          <li>Corta el queso en rodajas de 1cm.</li>
+          <li>Pasa las rodajas por huevo batido y luego por pan rallado.</li>
+          <li>Fríe en aceite caliente hasta que estén doradas.</li>
+          <li>Retira y deja escurrir sobre papel absorbente.</li>
+          <li>Sirve caliente con café o té andino.</li>
+        </ol>
+      </section>
+    </div>
+  </div>
+</div>
+
+<div id="modal2" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modal2')">SALIR</span>
+
+    <img class="modal-img" src="../images/quesofrito.webp" alt="Plato terminado">
+
+    <div class="modal-text">
+      <h2>sopa verde</h2>
+
+      <section class="ingredients">
+        <h3>🧂 Ingredientes:</h3>
+        <ul>
+          <li>200g de queso fresco andino</li>
+          <li>2 huevos</li>
+          <li>Pan rallado</li>
+          <li>Aceite vegetal</li>
+          <li>Sal al gusto</li>
+        </ul>
+      </section>
+
+      <section class="steps">
+        <h3>👨‍🍳 Paso a paso:</h3>
+        <ol>
+          <li>Corta el queso en rodajas de 1cm.</li>
+          <li>Pasa las rodajas por huevo batido y luego por pan rallado.</li>
+          <li>Fríe en aceite caliente hasta que estén doradas.</li>
+          <li>Retira y deja escurrir sobre papel absorbente.</li>
+          <li>Sirve caliente con café o té andino.</li>
+        </ol>
+      </section>
+    </div>
+  </div>
+</div>
+
+<div id="modal3" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modal3')">SALIR</span>
+
+    <img class="modal-img" src="../images/quesofrito.webp" alt="Plato terminado">
+
+    <div class="modal-text">
+      <h2>Queso con miel de caña</h2>
+
+      <section class="ingredients">
+        <h3>🧂 Ingredientes:</h3>
+        <ul>
+          <li>200g de queso fresco andino</li>
+          <li>2 huevos</li>
+          <li>Pan rallado</li>
+          <li>Aceite vegetal</li>
+          <li>Sal al gusto</li>
+        </ul>
+      </section>
+
+      <section class="steps">
+        <h3>👨‍🍳 Paso a paso:</h3>
+        <ol>
+          <li>Corta el queso en rodajas de 1cm.</li>
+          <li>Pasa las rodajas por huevo batido y luego por pan rallado.</li>
+          <li>Fríe en aceite caliente hasta que estén doradas.</li>
+          <li>Retira y deja escurrir sobre papel absorbente.</li>
+          <li>Sirve caliente con café o té andino.</li>
+        </ol>
+      </section>
+    </div>
+  </div>
+</div>
+
+<div id="modal4" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modal4')">SALIR</span>
+
+    <img class="modal-img" src="../images/quesofrito.webp" alt="Plato terminado">
+
+    <div class="modal-text">
+      <h2>Ensalada de queso serrano con quinua</h2>
+
+      <section class="ingredients">
+        <h3>🧂 Ingredientes:</h3>
+        <ul>
+          <li>200g de queso fresco andino</li>
+          <li>2 huevos</li>
+          <li>Pan rallado</li>
+          <li>Aceite vegetal</li>
+          <li>Sal al gusto</li>
+        </ul>
+      </section>
+
+      <section class="steps">
+        <h3>👨‍🍳 Paso a paso:</h3>
+        <ol>
+          <li>Corta el queso en rodajas de 1cm.</li>
+          <li>Pasa las rodajas por huevo batido y luego por pan rallado.</li>
+          <li>Fríe en aceite caliente hasta que estén doradas.</li>
+          <li>Retira y deja escurrir sobre papel absorbente.</li>
+          <li>Sirve caliente con café o té andino.</li>
+        </ol>
+      </section>
+    </div>
+  </div>
+</div>
+
+<div id="modal5" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modal5')">SALIR</span>
+
+    <img class="modal-img" src="../images/quesofrito.webp" alt="Plato terminado">
+
+    <div class="modal-text">
+      <h2>Pastel de papa con queso</h2>
+
+      <section class="ingredients">
+        <h3>🧂 Ingredientes:</h3>
+        <ul>
+          <li>200g de queso fresco andino</li>
+          <li>2 huevos</li>
+          <li>Pan rallado</li>
+          <li>Aceite vegetal</li>
+          <li>Sal al gusto</li>
+        </ul>
+      </section>
+
+      <section class="steps">
+        <h3>👨‍🍳 Paso a paso:</h3>
+        <ol>
+          <li>Corta el queso en rodajas de 1cm.</li>
+          <li>Pasa las rodajas por huevo batido y luego por pan rallado.</li>
+          <li>Fríe en aceite caliente hasta que estén doradas.</li>
+          <li>Retira y deja escurrir sobre papel absorbente.</li>
+          <li>Sirve caliente con café o té andino.</li>
+        </ol>
+      </section>
+    </div>
+  </div>
+</div>
+
+<div id="modal6" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modal6')">SALIR</span>
+
+    <img class="modal-img" src="../images/quesofrito.webp" alt="Plato terminado">
+
+    <div class="modal-text">
+      <h2>Tamal de queso</h2>
+
+      <section class="ingredients">
+        <h3>🧂 Ingredientes:</h3>
+        <ul>
+          <li>200g de queso fresco andino</li>
+          <li>2 huevos</li>
+          <li>Pan rallado</li>
+          <li>Aceite vegetal</li>
+          <li>Sal al gusto</li>
+        </ul>
+      </section>
+
+      <section class="steps">
+        <h3>👨‍🍳 Paso a paso:</h3>
+        <ol>
+          <li>Corta el queso en rodajas de 1cm.</li>
+          <li>Pasa las rodajas por huevo batido y luego por pan rallado.</li>
+          <li>Fríe en aceite caliente hasta que estén doradas.</li>
+          <li>Retira y deja escurrir sobre papel absorbente.</li>
+          <li>Sirve caliente con café o té andino.</li>
+        </ol>
+      </section>
+    </div>
+  </div>
+</div>
+
+<div id="modal7" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modal7')">SALIR</span>
+
+    <img class="modal-img" src="../images/quesofrito.webp" alt="Plato terminado">
+
+    <div class="modal-text">
+      <h2>Choclo con queso andino</h2>
+
+      <section class="ingredients">
+        <h3>🧂 Ingredientes:</h3>
+        <ul>
+          <li>200g de queso fresco andino</li>
+          <li>2 huevos</li>
+          <li>Pan rallado</li>
+          <li>Aceite vegetal</li>
+          <li>Sal al gusto</li>
+        </ul>
+      </section>
+
+      <section class="steps">
+        <h3>👨‍🍳 Paso a paso:</h3>
+        <ol>
+          <li>Corta el queso en rodajas de 1cm.</li>
+          <li>Pasa las rodajas por huevo batido y luego por pan rallado.</li>
+          <li>Fríe en aceite caliente hasta que estén doradas.</li>
+          <li>Retira y deja escurrir sobre papel absorbente.</li>
+          <li>Sirve caliente con café o té andino.</li>
+        </ol>
+      </section>
+    </div>
+  </div>
+</div>
+
+<div id="modal8" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modal8')">SALIR</span>
+
+    <img class="modal-img" src="../images/quesofrito.webp" alt="Plato terminado">
+
+    <div class="modal-text">
+      <h2>Choclo con queso andino</h2>
+
+      <section class="ingredients">
+        <h3>🧂 Ingredientes:</h3>
+        <ul>
+          <li>200g de queso fresco andino</li>
+          <li>2 huevos</li>
+          <li>Pan rallado</li>
+          <li>Aceite vegetal</li>
+          <li>Sal al gusto</li>
+        </ul>
+      </section>
+
+      <section class="steps">
+        <h3>👨‍🍳 Paso a paso:</h3>
+        <ol>
+          <li>Corta el queso en rodajas de 1cm.</li>
+          <li>Pasa las rodajas por huevo batido y luego por pan rallado.</li>
+          <li>Fríe en aceite caliente hasta que estén doradas.</li>
+          <li>Retira y deja escurrir sobre papel absorbente.</li>
+          <li>Sirve caliente con café o té andino.</li>
+        </ol>
+      </section>
+    </div>
+  </div>
+</div>
+
+    <script src="../js/navbar.js"></script>
+    <script src="../js/menu.js"></script>
+    <script src="../js/modal.js"></script>
+</body>
+</html>

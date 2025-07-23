@@ -1,0 +1,269 @@
+:root {
+  --bg-color: #014421;
+  --bgc-color-secundario: #08080885;
+  --bgc-secundario: rgb(253, 253, 253);
+}
+/*! section home */
+.main{
+  position: relative;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  animation: fadeIn 1.2s ease-in-out both;
+  overflow-x: clip;
+  transition: background-image 0.6s ease-in-out;
+  z-index: 0;
+  overflow: hidden;
+
+}
+
+.main::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.493); /* 0.4 = opacidad del fondo */
+  z-index: 1;
+}
+.main {
+  position: relative;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  min-height: 85vh;
+  display: flex;
+  overflow: hidden; /* 👈 cambia esto */
+  z-index: 0; /* para permitir capas nuevas encima */
+  background-color: var(--bg-color);
+}
+
+.main-text,
+.img-container {
+  position: relative;
+  z-index: 3; /* 👈 asegúrate de que el contenido se mantenga visible */
+
+}
+.main-text{
+  position: absolute;
+  bottom: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+/*° texto */
+.text-container{
+  background-color: var(--bgc-color-secundario);
+    clip-path: polygon(
+    0 0,           /* top-left */
+    85% 0,         /* top, antes del corte */
+    100% 25%,      /* corte diagonal */
+    100% 100%,     /* bottom-right */
+    0 100%         /* bottom-left */
+  );
+}
+.text-container .card-sub-title1{
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  padding: 1rem 0.5rem;
+  font-family: 'sevillana', cursive;
+  color: rgb(255, 255, 255);
+  opacity: 0;
+  text-align: center;
+}
+.text-container .card-title{
+  text-transform: uppercase;
+  font-size: clamp(1.5rem, 9vw, 7rem);
+  line-height: 0.9;
+  font-weight: 900;
+  color: white;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  margin: 2rem 1rem;
+  font-family: 'Gravitas One', serif;
+  letter-spacing: 0.2rem;
+}
+#description{
+  color: white;
+  font-family: 'Michroma', sans-serif;
+  font-size: clamp(1rem, 2.5vw, 1rem);
+  margin: 1rem ;
+  letter-spacing: 0.1rem;
+}
+.about-btn{
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+}
+/*? imagenes en flex */
+.img-container{
+  position: relative;
+  overflow-x: clip
+}
+.img{
+  position: absolute;
+  bottom: 0;
+  right: -100px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.075);
+  border-radius: 10px;
+}
+.card1{
+  position: relative;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  display: flex;
+  min-width: 150px;
+  min-height: 250px;
+  animation: scaleInCenter 0.6s ease forwards;
+  transform-origin: center;
+  transition: transform 0.4s ease;
+  border-radius: 0 0 20px 20px; /* Solo abajo con radios */
+      clip-path: polygon(
+    0 0,           /* top-left */
+    85% 0,         /* top, antes del corte */
+    100% 10%,      /* corte diagonal */
+    100% 100%,     /* bottom-right */
+    0 100%         /* bottom-left */
+  );
+  bottom: 0;
+}
+.card-text{
+  position: absolute;
+  bottom: 0;
+}
+.card-text .card-sub-title{
+  font-size: 1rem;
+  color: #10003500;
+}
+.card-text .card-title1{
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  line-height: 0.9;
+  font-weight: 900;
+  margin: 1rem 0;
+  color: #10003500;
+}
+
+/*° botones */
+.btn-container{
+  position: absolute;
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0;
+  bottom: 0;
+  left: 50%;
+  z-index: 9;
+}
+.btnn{
+  padding: 0.5rem;
+  border: 1px solid white;
+  border-radius: 50%;
+  background-color: transparent;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 0.5rem !important;
+  text-align: center;
+  
+}
+.btnn i {
+  color: rgb(255, 255, 255);
+  font-size: 0.5rem;
+}
+@keyframes scaleInCenter {
+  0% {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOut {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.slide-up {
+  animation: slideUp 0.8s ease forwards;
+}
+
+.zoom-in {
+  animation: zoomIn 0.8s ease forwards;
+}
+
+.card1 {
+  transition: transform 0.6s ease, opacity 0.6s ease;
+  animation: slideIn 0.6s ease;
+}
+
+.card1.removing {
+  animation: slideOut 0.6s ease;
+}
+
+.card1.active {
+  animation: fadeInUp 0.6s ease forwards;
+  transform: scale(1.05);
+  z-index: 10;
+}

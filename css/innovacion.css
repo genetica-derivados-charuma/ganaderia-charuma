@@ -1,0 +1,273 @@
+:root {
+  --primary: #0045d4;
+  --dark: #081744;
+  --light-bg: #f7f9fc;
+  --text-dark: #1a1a1a;
+  --gris: gray;
+}
+.hero {
+  position: relative;
+  background: var(--dark);
+  color: #fff;
+  height: 70vh;
+  display: flex;
+  align-items: flex-end; /* Esto lo pega al fondo */
+  padding: 2rem;
+  text-align: center;
+  justify-content: center;
+}
+
+.hero-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 2;
+}
+.hero-text {
+  text-align: center;
+  max-width: 900px;
+}
+.hero-text h1 {
+  font-size: clamp(2rem, 5vw, 5rem);
+  font-family: 'Gravitas One', sans-serif;
+  margin-bottom: 20px;
+}
+.hero-text p {
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  margin-bottom: 20px;
+  font-family: 'Michroma', sans-serif;
+}
+
+/*? Steps  */
+.container {
+  max-width: 1400px;
+  margin: auto;
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 3rem;
+}
+
+.card {
+  border: 1px solid #ccc;
+  border-radius: 0;
+  overflow: hidden;
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+.con-img{
+  background-color: #db1515;
+  height: 300px;
+}
+.con-img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.card-content {
+  padding: 1rem;
+}
+.h3{
+  font-family: 'Gravitas One', sans-serif;
+}
+.tag {
+  padding: 0.3rem 0.7rem;
+  font-size: 1.5rem;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  font-family: 'Sevillana', serif;
+}
+
+.info {
+  font-size: 1rem;
+  color: var(--gris);
+  margin-bottom: 0.3rem;
+}
+
+.extras {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}
+
+.description {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  font-family: 'Michroma', sans-serif;
+}
+.con-btn{
+  width: 100%;
+  text-align: center;
+}
+.btn {
+  background-color: var(--text-dark);
+  color: white;
+  padding: 0.5rem 0.5rem;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  text-align: center;
+}
+.stars{
+  font-size: 1.3rem;
+  font-family: 'Michroma', sans-serif;
+}
+/* ? modal*/
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.85);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+/* Contenido interno */
+.modal-content {
+  background: #fff;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 800px;
+  max-height: 95vh;
+  overflow-y: auto;
+  padding: 20px;
+  position: relative;
+  box-shadow: 0 0 30px rgba(0,0,0,0.5);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Animación suave */
+@keyframes fadeIn {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* Botón cerrar */
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 28px;
+  cursor: pointer;
+  color: #333;
+}
+
+/* Imagen superior */
+.modal-img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+/* Texto general */
+.modal-text h2 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+/* Ingredientes */
+.ingredients, .steps {
+  margin-bottom: 20px;
+}
+.ingredients ul {
+  list-style: "🍴 ";
+  padding-left: 20px;
+}
+.steps ol {
+  padding-left: 20px;
+}
+.steps li {
+  margin-bottom: 10px;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .modal-content {
+    padding: 15px;
+  }
+  .modal-text h2 {
+    font-size: 22px;
+  }
+}
+
+/*? about */
+    .about {
+      padding: 80px 40px;
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .about img {
+      width: 100%;
+      max-width: 400px;
+    }
+
+    .about-text {
+      flex: 1;
+    }
+
+    .about-text h2 {
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+
+    .about-text p {
+      margin-bottom: 15px;
+      color: #555;
+    }
+
+    .about-stats {
+      display: flex;
+      gap: 40px;
+      margin-top: 20px;
+    }
+
+    .about-stats div {
+      background: var(--light-bg);
+      padding: 20px;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 1.5em;
+      color: var(--primary);
+    }
+
+    @media(max-width: 768px) {
+      .hero-content, .step-cards, .about {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .domain-search {
+        margin-top: 40px;
+      }
+
+      nav ul {
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .about-stats {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }

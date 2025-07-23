@@ -1,0 +1,299 @@
+:root {
+  --bg-color: 	#014421;
+  --highlight: #F5C144;
+  --bgc-secundario: rgb(253, 253, 253);
+}
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.nav-container {
+  background:  var(--bg-color);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+  transition: all 0.8s ease;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: auto;
+}
+
+.logo-link .logo {
+  height: 120px;
+  width: 100px;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  margin: .3rem;
+
+}
+
+/* Hamburguesa */
+.nav-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: none;
+}
+
+.hamburger {
+  width: 25px;
+  height: 4.5px;
+  background-color: var(--bgc-secundario);
+  display: block;
+  position: relative;
+  transition: 0.3s ease-in-out;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 4px;
+  background-color: var(--bgc-secundario);
+  transition: 0.3s ease-in-out;
+}
+.hamburger::before {
+  top: -8px;
+}
+.hamburger::after {
+  top: 8px;
+}
+
+/* NAV normal */
+.nav-ul {
+  list-style: none;
+  display: flex;
+  padding: 3rem;
+  gap: 0.3rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--bgc-secundario);
+  font-weight: 300;
+  font-family: 'Sevillana', cursive;
+  letter-spacing: 0.1rem;
+  font-size: 1.3rem;
+  padding: 0.5rem 1rem;
+  border-radius: 40px;
+}
+
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.795);
+  transition: 0.5s;
+  color: var(--bg-color);
+}
+
+.nav-link.active {
+  background-color: var(--bgc-secundario);
+  color: var(--bg-color);
+  transition: 0.1s;
+}
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.3); /* leve oscurecimiento */
+  z-index: 997; /* debajo del menú (998) */
+  display: none;
+}
+
+.menu-overlay.active {
+  display: block;
+}
+
+.nav-actions a{
+  color: var(--bgc-secundario);
+}
+
+.a{
+  font-size: 2rem;
+}
+/*! Perfil */
+.profile-menu {
+  position: relative;
+  display: inline-block;
+}
+
+.profile-btn {
+  background: none;
+  border: none;
+  color: var(--bgc-secundario);
+  font-size: 1.3rem;
+  cursor: pointer;
+  font-family: 'Sevillana', cursive;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.profile-dropdown {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 2.2rem;
+  background-color: var(--bg-color);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 0.5rem;
+  padding: 0.5rem 0;
+  min-width: 250px;
+  z-index: 999;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+.profile-dropdown a {
+  display: block;
+  padding: 0.5rem 1rem;
+  font-family: 'Sevillana', cursive;
+}
+
+.profile-dropdown a:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: var(--bg-color);
+  transition: 0.1s;
+}
+
+/* Mostrar menú al hacer hover o click */
+.profile-menu:hover .profile-dropdown {
+  display: block;
+}
+
+.arrow-down {
+  font-size: 1.8rem;
+}
+
+.profile-dropdown {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 2.2rem;
+  background-color: var(--bg-color);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 0.5rem;
+  padding: 0.5rem 0;
+  min-width: 200px;
+  z-index: 999;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.profile-dropdown.active {
+  display: block;
+}
+/*! carrito*/
+.carrito-icon {
+  position: relative;
+  display: inline-block;
+}
+
+.cart-count {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: white; /* color amarillo o el que definas */
+  color: var(--bg-color); /* texto oscuro o blanco, según tu fondo */
+  font-size: 0.75rem;
+  font-weight: bold;
+  padding: 4px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px white;
+  line-height: 1;
+}
+/*! RESPONSIVE animado desde el lado izquierdo */
+@media (max-width: 1030px) {
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-ul {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 70vw;
+    height: 100vh;
+    background: var(--bg-color);
+    transition: left 0.4s ease-in-out;
+    gap: 2rem;
+    z-index: 998;
+  }
+
+  .nav-ul.open {
+    left: 0;
+  }
+
+  .nav-link {
+    font-size: 1.2rem;
+  }
+}
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Aplicar la animación con un delay escalonado */
+.nav-container,
+.logo-link,
+.nav-ul li,
+.nav-actions a,
+.nav-toggle {
+  opacity: 0;
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+/* Delays escalonados */
+.logo-link {
+  animation-delay: 0.1s;
+}
+
+.nav-ul li:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.nav-ul li:nth-child(2) {
+  animation-delay: 0.3s;
+}
+.nav-ul li:nth-child(3) {
+  animation-delay: 0.4s;
+}
+.nav-ul li:nth-child(4) {
+  animation-delay: 0.5s;
+}
+.nav-ul li:nth-child(5) {
+  animation-delay: 0.6s;
+}
+.nav-ul li:nth-child(6) {
+  animation-delay: 0.7s;
+}
+
+.nav-actions a:nth-child(1) {
+  animation-delay: 0.8s;
+}
+.nav-actions a:nth-child(2) {
+  animation-delay: 0.9s;
+}
+.nav-actions a:nth-child(3) {
+  animation-delay: 1s;
+}
+
+.nav-toggle {
+  animation-delay: 1.1s;
+}

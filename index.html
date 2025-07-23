@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/navbar.css">
+    <link rel="stylesheet" href="./css/inicio.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/general.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Sevillana&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gravitas+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/earlyaccess/parastoo.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Asegúrate de tener GSAP y ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+
+    <!-- Glider carrusel-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css" />
+    <!-- remixes -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet">
+
+    <title>Charuma-Llambilla</title>
+
+</head>
+<body>
+
+    <!--!  Barra de navegación -->
+    <nav class="nav-container">
+        <section class="nav">
+            <!-- Logo -->
+            <a href="/" class="logo-link">
+            <img class="logo" src="../images/logoi.png" alt="Logo" />
+            </a>
+
+            <!-- Lista de navegación centrada -->
+            <ul class="nav-ul" id="navMenu">
+                <li><a href="/" class="nav-link">Inicio</a></li>
+                <li><a href="./nosotros/" class="nav-link">Conócenos</a></li>
+                <li><a href="./productos/" class="nav-link">Productos</a></li>
+                <li><a href="./innovacion/" class="nav-link">Recetas</a></li>
+                <li><a href="./contacto/" class="nav-link">Contacto</a></li>
+            </ul>
+
+            <!-- Login / Registro / Carrito alineado a la derecha -->
+            <div class="nav-actions">
+                <!-- Perfil con menú desplegable -->
+                <div class="profile-menu">
+                    <button class="profile-btn" aria-label="Perfil">
+                    👤 <span class="arrow-down">▼</span>
+                    </button>
+                    <div class="profile-dropdown">
+                        <a href="./login/" class="nav-link">Iniciar sesión</a>
+                        <a href="./registro/" class="nav-link">Registrarse</a>
+                    </div>
+                </div>
+                <!-- Carrito afuera -->
+                <a href="./carrito/" class="nav-link a carrito-icon">
+                🛒
+                <span class="cart-count">10</span>
+                </a>
+
+            </div>
+
+            <!-- Botón hamburguesa (opcional para móvil) -->
+            <button class="nav-toggle" aria-label="Abrir menú" id="hamburgerBtn">
+                <span class="hamburger"></span>
+            </button>
+        </section>
+    </nav>
+
+    <div id="menuOverlay" class="menu-overlay"></div>
+
+
+
+    <!--! Nosotros -->
+    <div id="main" class="main">
+        <section class="main-text">
+            <div class="text-container">
+              <h2 class="card-sub-title1" id="subtitle">Swintend Lands alps</h2>
+              <h1 class="card-title" id="title">SAINT ANTONIEM</h1>
+              <p id="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat vitae tempore illum incidunt, tenetur odio aperiam...</p>
+              <a href="#" class="about-btn">
+                Contactanos <i class="fas fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+            <div class="img-container">
+              <div class="img" id="cardContainer">
+                <!-- Cards se renderizan por JS -->
+              </div>
+              
+            </div>
+            <div class="btn-container">
+              <button class="btnn" onclick="prevCard()"><i class="ri-arrow-left-line" style="font-size: 3rem;"></i></button>
+              <button class="btnn" onclick="nextCard()"><i class="ri-arrow-right-line" style="font-size: 3rem;"></i></button>
+            </div>
+        </section>
+    </div>
+    <!--! Nosotros -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+
+
+    <!--! aliados-->
+
+    <section class="section-clientes">
+      <div class="section-clientes-title">
+        <h3 class="clientes-text">Clientes</h3>
+      </div>
+      <div class="carrusel-aliados">
+        <img class="carrusel-img" src="./images/bonle.png" alt="aliados">
+        <img class="carrusel-img" src="./images/ideal.webp" alt="aliados">
+        <img class="carrusel-img" src="./images/laive.png" alt="aliados">
+        <img class="carrusel-img" src="./images/nestle.svg" alt="aliados">
+        <img class="carrusel-img" src="./images/soyvida.webp" alt="aliados">
+      </div>
+    </section>
+
+    <!--! SECTIONS-->
+<section class="products-section-container">
+  <section class="seccion-servicio">
+    <div class="contenido-servicio">
+      <p class="subtitulo">Cómo trabajamos con nuestros clientes</p>
+      <h2 class="titulo">LECHE FRESCA</h2>
+      <p class="descripcion">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at lacus lorem. 
+        Accusantium aut in voluptatem provident! Placeat in diam vitae. 
+        Sed nisi voluptate tenetur, nam fugiat.
+      </p>
+      <a href="#" class="btn-servicio">Ver Detalles <i class="fas fa-arrow-up-right-from-square"></i></a>
+    </div>
+
+    <div class="imagen-servicio">
+      <img src="./images/familia.jpg" alt="Casa moderna">
+    </div>
+  </section>
+
+  <div class="productos-section">
+    <h2 class="title">Productos Destacados</h2>
+    <a class="btn-servicio" href="">Ver mas productos <i class="fas fa-arrow-up-right-from-square"></i></a>
+  </div>
+
+  <section class="seccion-servicio">
+    <div class="imagen-servicio">
+      <img src="./images/familia.jpg" alt="Casa moderna">
+    </div>    
+    <div class="contenido-servicio">
+      <p class="subtitulo">Cómo trabajamos con nuestros clientes</p>
+      <h2 class="titulo">Don Queso</h2>
+      <p class="descripcion">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at lacus lorem. 
+        Accusantium aut in voluptatem provident! Placeat in diam vitae. 
+        Sed nisi voluptate tenetur, nam fugiat.
+      </p>
+      <a href="#" class="btn-servicio">Ver Detalles <i class="fas fa-arrow-up-right-from-square"></i></a>
+    </div>
+
+
+  </section>
+
+</section>
+
+    <!--! section about us -->
+    
+    <section class="about-us">
+      <div class="about-left">
+        <h2 class="about-title">Sobre Nosotros</h2>
+        <h2 class="about-subtitle">Asociacion ganaderia Asunción de Cachuy</h2>
+        <p class="about-description">
+          La Asociación ganaderia Asunción de Cachuy es una organización dedicada a la producción y comercialización de bovino en pie de alta calidad en la región de Lima.
+          Estamos ubicados en la localidad de juan de tantaranche, Distrito de San Lorenzo de Quinti, Provincia de Huarochirí. 
+        </p>
+
+        <a href="#" class="about-btn">
+          Conócenos <i class="fas fa-arrow-up-right-from-square"></i>
+        </a>
+      </div>
+
+
+      <div class="experience-section">
+        <div class="cardabout">
+          <div class="card-image-about">
+            <img src="./images/familia.jpg" alt="">
+          </div>
+          <div>
+            <div class="card-texto">Productores que garantizan calidad</div>
+          </div>
+        </div>
+        <div class="cardabout">
+          <div>
+            <div class="card-texto">Marca con identidad andina auténtica</div>
+          </div>
+
+          <div class="card-image-about">
+            <img src="./images/familia.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+  <!--! section about us -->
+
+  <!--! ¿por que elgirnos? -->
+<section class="beneficios-section">
+  <h2 class="beneficios-title">¿Por qué elegirnos?</h2>
+  
+  <div class="carrusel-wrapper">
+    <div class="beneficios-carrusel">
+      <div class="beneficio-card">
+        <h3>Leche 100% fresca</h3>
+        <p>Recién ordeñada, sin conservantes.</p>
+        <button>Ver detalles</button>
+      </div>
+      <div class="beneficio-card">
+        <h3>Quesos artesanales</h3>
+        <p>Elaborados con técnicas tradicionales.</p>
+        <button>Ver detalles</button>
+      </div>
+      <div class="beneficio-card">
+        <h3>Ingredientes naturales</h3>
+        <p>Sin aditivos ni químicos añadidos.</p>
+        <button>Ver detalles</button>
+      </div>
+      <div class="beneficio-card">
+        <h3>Entrega directa</h3>
+        <p>Llevamos el producto a tu negocio.</p>
+        <button>Ver detalles</button>
+      </div>
+      <div class="beneficio-card">
+        <h3>Productores comprometidos</h3>
+        <p>Trabajo honesto de nuestra comunidad.</p>
+        <button>Ver detalles</button>
+      </div>
+      <div class="beneficio-card">
+        <h3>Tradición y sabor</h3>
+        <p>Más de 10 años alimentando familias.</p>
+        <button>Ver detalles</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!--! ¿por que elgirnos? -->
+  
+  <!--! coments -->
+  <div class="comments">
+      <div class="comments-section">
+      <!-- Imagen lateral -->
+      <div class="comment-image">
+        <img src="./images/inicio-portada.webp" alt="Comentario Ilustrado" />
+      </div>
+
+      <!-- Comentarios rotativos -->
+      <div class="comment-box" id="commentBox">
+        <div class="comment active">“Una plataforma increíblemente útil para gestionar nuestros proyectos con claridad y rapidez. La recomiendo totalmente.”</div>
+        <div class="comment">“El diseño es intuitivo y moderno. Hemos notado una mejora real en la comunicación con nuestros clientes.”</div>
+        <div class="comment">“Excelente atención y resultados rápidos. Ha superado nuestras expectativas en cada aspecto técnico.”</div>
+        <div class="comment">“Ideal para equipos que buscan eficiencia y una interfaz profesional sin complicaciones.”</div>
+      </div>
+    </div>
+  </div>
+  <!--! coments -->
+    <!--! timeline -->
+    <div class="proceso-productivo">
+      <h2>Proceso de Producción</h2>
+    </div>
+ <div class="timeline-container">
+
+    <!-- Eventos sobre la curva -->
+    <div class="timeline-events">
+      <div class="event">
+        <div class="text-top">
+          <img class="imgs" src="./images/inicio-portada.webp" alt="">
+          <div>
+            <strong>LOREM IPSUM</strong>
+            <p>Lorem ipsum dolor sit amet, consectetur.</p>
+          </div>
+        </div>
+        <div class="event-circle">1</div>
+      </div>
+
+      <div class="event">
+        <div class="event-circle">2</div>
+        <div class="text-bottom">
+          <div>
+            <strong>LOREM IPSUM</strong>
+            <p>Lorem ipsum dolor sit amet, consectetur.</p> 
+          </div>
+          <img class="imgs" src="./images/inicio-portada.webp" alt="">
+        </div>
+      </div>
+
+      <div class="event">
+        <div class="text-top">
+          <img class="imgs" src="./images/inicio-portada.webp" alt="">
+          <div>
+            <strong>LOREM IPSUM</strong>
+            <p>Lorem ipsum dolor sit amet, consectetur.</p>
+          </div>
+        </div>
+        <div class="event-circle">3</div>
+      </div>
+
+      <div class="event">
+        <div class="event-circle">4</div>
+        <div class="text-bottom">
+            <strong>LOREM IPSUM</strong>
+            <p>Lorem ipsum dolor sit amet, consectetur.</p> 
+          </div>
+          <img  class="imgs" src="./images/inicio-portada.webp" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--! timeline -->
+  <!--! aliados estrategicos -->
+  <div class="aliados">
+    <h2>Entidades que impulsan nuestro crecimiento</h2>
+    <div>
+        <section class="bgc-general">
+    <section class="contenido-alianzas">
+        <div data-aos="zoom-in">
+            <div class="carrusel-infinito">
+              <section class="logo-wall">
+                <div class="marquee marquee-fast">
+                  <div class="marquee-inner">
+                    <div class="logo-track">
+                      <img src="./images/ministerio.jpg" alt="logo1" />
+                      <img src="./images/agrorural.png" alt="logo2" />
+                      <img src="./images/avanzar.jpg" alt="logo3" />
+                      <img src="./images/fida.jpg" alt="logo4" />
+                      <img src="./images/familiar.jpeg" alt="logo5" />
+
+                      <!-- Duplica para animación continua -->
+                      <img src="./images/ministerio.jpg" alt="logo1" />
+                      <img src="./images/agrorural.png" alt="logo2" />
+                      <img src="./images/avanzar" alt="logo3" />
+                      <img src="./images/fida" alt="logo4" />
+                      <img src="./images/familia.jpg" alt="logo5" />
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+        </div>
+    </section>  
+  </section>
+    </div>
+  </div>
+  <!--! aliados estrategicos -->
+
+  <footer>
+    <div>
+      footer
+    </div>    
+  </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <script src="../js/carruseel-general.js"></script>
+    <script src="./js/nav.js"></script>
+    <script src="./js/menu.js"></script>
+    <script src="./js/track.js"></script>
+    <script src="./js/comments.js"></script>
+    <script src="./js/gsapinicio.js"></script>
+    <script src="./js/acordeon.js"></script>
+    <script src="./js/beneficios.js"></script>
+    <script src="./js/scroll-trigger.js"></script>
+</body>
+</html>

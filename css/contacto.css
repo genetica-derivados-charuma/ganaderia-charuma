@@ -1,0 +1,361 @@
+:root {
+  --bg-color: #014421;
+  --bgc-color-secundario: #08080885;
+  --bgc-secundario: rgb(253, 253, 253);
+  --blanco: #ffffff;
+  --parrafo-verde: #ffffffb9;
+  --black: #000000ce;
+  --gris: #636161;
+}
+/*! contacto */
+.hero {
+  background: url('../images/contactanos_x4.jpg') no-repeat center center/cover;
+  height: 90vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 60px;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.493); /* 0.4 = opacidad del fondo */
+  z-index: 0;
+}
+
+.hero-text {
+  max-width: 500px;
+  z-index: 2;
+}
+
+.hero-title {
+  font-size:  7rem;
+  font-family: 'Gravitas One', cursive;
+  color: #fff;
+  z-index: 2;
+  text-align: center;
+}
+.cards {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 40px;
+  width: 90%;
+  max-width: 1100px;
+  justify-content: space-between;
+  color: #fff;
+}
+.card {
+  background: var(--bgc-color-secundario);
+  padding: 20px;
+  flex: 1;
+  text-align: center;
+  border-radius: 10px;
+  backdrop-filter: blur(4px);
+}
+
+.card-icon {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+.card p {
+  font-size: 0.95em;
+  margin-bottom: 15px;
+  font-family: 'Michroma', sans-serif;
+}
+.card a {
+  color: #fff;
+  font-weight: bold;
+  font-size: 0.95em;
+  text-decoration: none;
+  padding: 0.5rem 5rem; 
+  background-color: #000;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+}
+/*! contacto */
+/* Formulario */
+.contact-form {
+  flex: 1;
+  min-width: 300px;
+  padding: 30px 20px;
+}
+form {
+  border: 1px solid #fff;
+  padding: 30px 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+.contact-form h3 {
+  font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+  margin-bottom: 20px;
+  color: var(--blanco);
+  font-family: 'Gravitas One', cursive;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  margin: 1rem 0;
+  background: var(--black);
+  font-size: 14px;
+  border-radius: 10px;
+}
+input::placeholder{
+  color: var(--blanco);
+} 
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.form-row input,
+.form-row select {
+  flex: 1;
+}
+
+.contact-form button {
+  width: max-content;
+  background: #000;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  padding: 1rem 5rem;
+}
+.form-label{
+  position: relative;
+  color: var(--blanco);
+  font-family: 'Michroma', sans-serif;
+}
+textarea {
+  resize: none;
+}
+textarea::placeholder{
+  color: var(--blanco);
+}
+.form-submit {
+  display: flex;
+  justify-content: center;
+}
+/*? faq */
+
+.faq-contact-section {
+  background-color: var(--bg-color);
+  padding: 6rem 0;
+}
+.faq-contact-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1rem;
+}
+
+.faq {
+  flex: 1;
+  min-width: 300px;
+}
+.faq h2 {
+  position: relative;
+  top: 2rem;
+  font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+  margin-bottom: 40px;
+  font-family: 'Gravitas One', sans-serif;
+  color: var(--blanco);
+  text-align: end;
+}
+.faq-item {
+  margin-bottom: 13px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border: 1px solid #fff;
+}
+
+.faq-question {
+  background: none;
+  border: none;
+  padding: 15px 20px;
+  width: 100%;
+  text-align: left;
+  font-size: 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  position: relative;
+  font-family: 'Sevillana', sans-serif;
+  color: var(--blanco);
+}
+
+.faq-question::after {
+  content: '+';
+  position: absolute;
+  right: 20px;
+  font-size: 20px;
+  transition: transform 0.3s;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.faq-item.open .faq-question::after {
+  content: '-';
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.faq-answer {
+  display: none;
+  padding: 0 20px 15px;
+  font-size: 14px;
+  color: var(--parrafo-verde);
+  font-family: 'Michroma', sans-serif;
+}
+
+.faq-item.open .faq-answer {
+  display: block;
+}
+
+
+/*! mas info*/
+
+/* Estilo general */
+.contact-info-section {
+  padding: 60px 20px;
+  background: #fff;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.contact-details {
+
+  border-right: 1px solid var(--gris);
+  border-radius: 0px;
+}
+.contact-details  h2 {
+  position: relative;
+  top: 2rem;
+  font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+  margin-bottom: 40px;
+  font-family: 'Gravitas One', sans-serif;
+  color: var(--gris);
+  text-align: center;
+}
+.contact-details .contact-text {
+  font-size:  1rem;
+  font-family: 'Michroma', sans-serif;
+}
+.contact-details ul {
+  text-align: center;
+}
+.contact-details ul li {
+  font-family: 'Michroma', sans-serif;
+}
+.contact-details ul li strong {
+  font-family: 'Sevillana', sans-serif;
+  font-size: 1.5rem;
+  color: var(--gris) 
+}
+/* Bloques comunes */
+/* Redes sociales y ubicación como un solo bloque */
+.right-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* Listas */
+.contact-details ul,
+.location-info ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.contact-details li,
+.location-info li {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.directions li {
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #444;
+}
+
+/* Botón mapa */
+.btn-maps {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  background: var(--black);
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+
+/* Redes sociales */
+.social-info h2 {
+  position: relative;
+  top: 2rem;
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  margin-bottom: 40px;
+  font-family: 'Gravitas One', sans-serif;
+  color: var(--gris);
+  text-align: center;
+}
+.social-icons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.social-icons a {
+  font-size: 2.5rem;
+  color: #444;
+  padding: 10px;
+}
+.location-info {
+  text-align: center;
+}
+.location-info h2 {
+  position: relative;
+  top: 2rem;
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  margin-bottom: 40px;
+  font-family: 'Gravitas One', sans-serif;
+  color: var(--gris);
+  text-align: center;
+}
+.location-info p {
+  font-size:  1rem;
+  font-family: 'Michroma', sans-serif;
+}
+.location-info p strong {
+  font-family: 'Sevillana', sans-serif;
+  font-size: 1.5rem;
+  color: var(--gris) 
+}
+.directions li {
+  font-family: 'Michroma', sans-serif;
+  font-size: 14px;
+}
+/* Mapa */
+.map-container {
+  max-width: 1400px;
+  margin: 40px auto 0;
+}

@@ -1,0 +1,275 @@
+:root {
+  --primary: #0045d4;
+  --dark: #081744;
+  --light-bg: #f7f9fc;
+  --text-dark: #1a1a1a;
+  --gris: gray;
+}
+.hero {
+  position: relative;
+  background: var(--dark);
+  color: #fff;
+  height: 70vh;
+  display: flex;
+  align-items: flex-end; /* Esto lo pega al fondo */
+  padding: 2rem;
+  text-align: center;
+  justify-content: center;
+}
+
+.hero-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 2;
+}
+.hero-text {
+  text-align: center;
+  max-width: 1200px;
+}
+.hero-text h1 {
+  font-size: clamp(2rem, 5vw, 5rem);
+  font-family: 'Gravitas One', sans-serif;
+  margin-bottom: 20px;
+}
+.hero-text p {
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  margin-bottom: 20px;
+  font-family: 'Michroma', sans-serif;
+}
+/*!productos*/
+.product-section {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+.product-row {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  align-items: center;
+}
+.product-rowB{
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  align-items: center;
+}
+
+.large {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #000000;
+  padding: 1rem;
+}
+
+.large img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product-flex {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  justify-items: center;
+  align-items: center;
+  padding: 1rem;
+
+}
+
+/* Estilos para las tarjetas */
+.product-card-den {
+  width: 100%;
+  border: 1px solid #000000;
+  padding: 1rem;
+}
+.image-container {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+}
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .product-row {
+    grid-template-columns: 1fr; /* de dos columnas a una */
+  }
+  .product-rowB{
+    grid-template-columns: 1fr;
+  }
+  .product-flex {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+}
+
+/* Contenido del producto */
+.product-info {
+  padding: 1rem;
+}
+
+/* Etiquetas descriptivas */
+.field-label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: var(--gris);
+  margin-bottom: 0.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.field-label .product-name {
+  color: var(--text-dark) !important;
+  font-family: 'Gravitas One', sans-serif;
+}
+/* Título del producto */
+.product-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 1rem;
+}
+
+/* Reseña */
+.product-rating {
+  font-size: 0.95rem;
+  color: #f39c12;
+  margin-bottom: 0.5rem;
+}
+
+/* Descripción */
+.product-description {
+  font-size: 0.95rem;
+  color: #000000;
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+  font-family: 'Michroma', sans-serif;
+  font-weight: bold;
+}
+
+/* Precio */
+.product-price {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--dark);
+  margin-bottom: 0.5rem;
+}
+
+/* Botón de WhatsApp */
+.product-actions {
+  text-align: center;
+  margin: 1rem 0 0 0;
+}
+.whatsapp-button {
+  display: inline-block;
+  background-color: #000000;
+  color: white;
+  padding: 0.75rem 1.25rem;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+/* Responsivo */
+@media (max-width: 500px) {
+  .product-card {
+    max-width: 100%;
+    margin: 0 1rem;
+  }
+
+  .product-title {
+    font-size: 1.1rem;
+  }
+
+  .product-price {
+    font-size: 1rem;
+  }
+
+  .product-description,
+  .product-rating {
+    font-size: 0.9rem;
+  }
+
+  .whatsapp-button {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/*° segunda parte*/
+
+h2, h3 {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.categories {
+  padding: 20px;
+}
+
+.category-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.category-item {
+  text-align: center;
+  max-width: 300px;
+}
+
+.category-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.features {
+  padding: 40px 20px;
+  background-color: #fff;
+}
+
+.features-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.feature {
+  text-align: center;
+  max-width: 200px;
+}
+
+.feature img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 10px;
+}
+
+
+@media (max-width: 768px) {
+  .category-grid, .features-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cta {
+    height: auto;
+    padding: 40px 20px;
+  }
+}

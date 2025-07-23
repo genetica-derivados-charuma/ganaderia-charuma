@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/productos.css">
+    <link rel="stylesheet" href="../css/general.css">
+    <link rel="stylesheet" href="../css/index.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Sevillana&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
+
+     <link href="https://fonts.googleapis.com/css2?family=Gravitas+One&display=swap" rel="stylesheet">
+
+    <title>Document</title>
+</head>
+<body>
+    <nav class="nav-container">
+        <section class="nav">
+            <!-- Logo -->
+            <a href="../" class="logo-link">
+            <img class="logo" src="../images/logoi.png" alt="Logo" />
+            </a>
+
+            <!-- Lista de navegación centrada -->
+            <ul class="nav-ul" id="navMenu">
+                <li><a href="../" class="nav-link">Inicio</a></li>
+                <li><a href="../nosotros/" class="nav-link">Conócenos</a></li>
+                <li><a href="/productos/" class="nav-link active">Productos</a></li>
+                <li><a href="../innovacion/" class="nav-link">Recetas</a></li>
+                <li><a href="../contacto/" class="nav-link">Contacto</a></li>
+            </ul>
+            <!-- Login / Registro / Carrito alineado a la derecha -->
+            <div class="nav-actions">
+                <!-- Perfil con menú desplegable -->
+                <div class="profile-menu">
+                    <button class="profile-btn" aria-label="Perfil">
+                    👤 <span class="arrow-down">▼</span>
+                    </button>
+                    <div class="profile-dropdown">
+                        <a href="./login/" class="nav-link">Iniciar sesión</a>
+                        <a href="./registro/" class="nav-link">Registrarse</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Botón hamburguesa (opcional para móvil) -->
+            <button class="nav-toggle" aria-label="Abrir menú" id="hamburgerBtn">
+                <span class="hamburger"></span>
+            </button>
+        </section>
+    </nav>
+
+    <div id="menuOverlay" class="menu-overlay"></div>
+
+    <!--! Nosotros -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Tradición, sabor y calidad en cada producto artesanal</h1>
+                <p>Sabor andino en cada receta, con el queso como estrella principal.</p>
+            </div>
+        </div>
+    </section>
+    <!--! Nosotros -->
+
+    <!--! SECTIONS PRINCIṔAL-->
+    <section class="product-section">
+        <h2 class="section-title">Nuestros productos</h2>
+        
+        <div class="product-grid">
+            <div class="product-row">
+                <div class="product-card large">
+                    <img src="../images/inicio-portada.webp" class="" alt="Modern Kitchen" />
+                </div>
+                <div class="product-flex">
+                    <div class="product-card-den">
+                        <div class="image-container">
+                            <img src="../images/inicio-portada.webp" alt="Queso artesanal Don Queso" />
+                        </div>
+                        <div class="product-info">
+                            <strong class="field-label">Nombre: <span class="product-name">Queso Fresco Artesanal – 1kg</span> </strong>
+                            <!-- Reseña del producto -->
+                            <div class="product-rating">
+                            ⭐⭐⭐⭐ – “Muy cremoso y natural, me encantó.”
+                            </div>
+
+                            <!-- Descripción del producto -->
+                            <strong class="field-label">Descripción:</strong>
+                            <p class="product-description">
+                            Elaborado con leche 100% natural, sin conservantes ni aditivos. Perfecto para acompañar tus desayunos o almuerzos.
+                            </p>
+
+                            <!-- Precio -->
+                            <strong class="field-label">Precio: <span class="product-price">S/ 18.00 por kilo</span></strong>
+
+                            <!-- Botón para separar -->
+                            <div class="product-actions">
+                                <a href="https://wa.me/519XXXXXXX?text=Hola%2C%20quiero%20separar%20un%20queso%20fresco." class="whatsapp-button">
+                                    Separar por WhatsApp
+                                </a>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                    <div class="product-card-den">
+                        <div class="image-container">
+                            <img src="../images/inicio-portada.webp" alt="Queso artesanal Don Queso" />
+                        </div>
+                        <div class="product-info">
+                            <strong class="field-label">Nombre: <span class="product-name">Queso Fresco Artesanal – 1kg</span> </strong>
+                            <!-- Reseña del producto -->
+                            <div class="product-rating">
+                            ⭐⭐⭐⭐ – “Muy cremoso y natural, me encantó.”
+                            </div>
+
+                            <!-- Descripción del producto -->
+                            <strong class="field-label">Descripción:</strong>
+                            <p class="product-description">
+                            Elaborado con leche 100% natural, sin conservantes ni aditivos. Perfecto para acompañar tus desayunos o almuerzos.
+                            </p>
+
+                            <!-- Precio -->
+                            <strong class="field-label">Precio: <span class="product-price">S/ 18.00 por kilo</span></strong>
+
+                            <!-- Botón para separar -->
+                            <div class="product-actions">
+                                <a href="https://wa.me/519XXXXXXX?text=Hola%2C%20quiero%20separar%20un%20queso%20fresco." class="whatsapp-button">
+                                    Separar por WhatsApp
+                                </a>
+                            </div>
+                            
+                        </div>
+                    </div>
+                <!-- Puedes duplicar más cards aquí -->
+                </div>
+            </div>
+
+            <div class="productmedio">
+                <div class="product-rowB">
+                    <div class="product-flex">
+                        <div class="product-card-den">
+                            <div class="image-container">
+                                <img src="../images/inicio-portada.webp" alt="Queso artesanal Don Queso" />
+                            </div>
+                            <div class="product-info">
+                                <strong class="field-label">Nombre: <span class="product-name">Queso Fresco Artesanal – 1kg</span> </strong>
+                                <!-- Reseña del producto -->
+                                <div class="product-rating">
+                                ⭐⭐⭐⭐ – “Muy cremoso y natural, me encantó.”
+                                </div>
+
+                                <!-- Descripción del producto -->
+                                <strong class="field-label">Descripción:</strong>
+                                <p class="product-description">
+                                Elaborado con leche 100% natural, sin conservantes ni aditivos. Perfecto para acompañar tus desayunos o almuerzos.
+                                </p>
+
+                                <!-- Precio -->
+                                <strong class="field-label">Precio: <span class="product-price">S/ 18.00 por kilo</span></strong>
+
+                                <!-- Botón para separar -->
+                                <div class="product-actions">
+                                    <a href="https://wa.me/519XXXXXXX?text=Hola%2C%20quiero%20separar%20un%20queso%20fresco." class="whatsapp-button">
+                                        Separar por WhatsApp
+                                    </a>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        
+                        <div class="product-card-den">
+                            <div class="image-container">
+                                <img src="../images/inicio-portada.webp" alt="Queso artesanal Don Queso" />
+                            </div>
+                            <div class="product-info">
+                                <strong class="field-label">Nombre: <span class="product-name">Queso Fresco Artesanal – 1kg</span> </strong>
+                                <!-- Reseña del producto -->
+                                <div class="product-rating">
+                                ⭐⭐⭐⭐ – “Muy cremoso y natural, me encantó.”
+                                </div>
+
+                                <!-- Descripción del producto -->
+                                <strong class="field-label">Descripción:</strong>
+                                <p class="product-description">
+                                Elaborado con leche 100% natural, sin conservantes ni aditivos. Perfecto para acompañar tus desayunos o almuerzos.
+                                </p>
+
+                                <!-- Precio -->
+                                <strong class="field-label">Precio: <span class="product-price">S/ 18.00 por kilo</span></strong>
+
+                                <!-- Botón para separar -->
+                                <div class="product-actions">
+                                    <a href="https://wa.me/519XXXXXXX?text=Hola%2C%20quiero%20separar%20un%20queso%20fresco." class="whatsapp-button">
+                                        Separar por WhatsApp
+                                    </a>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    <!-- Puedes duplicar más cards aquí -->
+                    </div>
+                    
+                    <div class="product-card large">
+                        <img src="../images/inicio-portada.webp" alt="Modern Kitchen" />
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="product-row">
+                <div class="product-card large">
+                    <img src="../images/inicio-portada.webp" class="" alt="Modern Kitchen" />
+                </div>
+                <div class="product-flex">
+                    <div class="product-card-den">
+                        <div class="image-container">
+                            <img src="../images/inicio-portada.webp" alt="Queso artesanal Don Queso" />
+                        </div>
+                        <div class="product-info">
+                            <strong class="field-label">Nombre: <span class="product-name">Queso Fresco Artesanal – 1kg</span> </strong>
+                            <!-- Reseña del producto -->
+                            <div class="product-rating">
+                            ⭐⭐⭐⭐ – “Muy cremoso y natural, me encantó.”
+                            </div>
+
+                            <!-- Descripción del producto -->
+                            <strong class="field-label">Descripción:</strong>
+                            <p class="product-description">
+                            Elaborado con leche 100% natural, sin conservantes ni aditivos. Perfecto para acompañar tus desayunos o almuerzos.
+                            </p>
+
+                            <!-- Precio -->
+                            <strong class="field-label">Precio: <span class="product-price">S/ 18.00 por kilo</span></strong>
+
+                            <!-- Botón para separar -->
+                            <div class="product-actions">
+                                <a href="https://wa.me/519XXXXXXX?text=Hola%2C%20quiero%20separar%20un%20queso%20fresco." class="whatsapp-button">
+                                    Separar por WhatsApp
+                                </a>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                    <div class="product-card-den">
+                        <div class="image-container">
+                            <img src="../images/inicio-portada.webp" alt="Queso artesanal Don Queso" />
+                        </div>
+                        <div class="product-info">
+                            <strong class="field-label">Nombre: <span class="product-name">Queso Fresco Artesanal – 1kg</span> </strong>
+                            <!-- Reseña del producto -->
+                            <div class="product-rating">
+                            ⭐⭐⭐⭐ – “Muy cremoso y natural, me encantó.”
+                            </div>
+
+                            <!-- Descripción del producto -->
+                            <strong class="field-label">Descripción:</strong>
+                            <p class="product-description">
+                            Elaborado con leche 100% natural, sin conservantes ni aditivos. Perfecto para acompañar tus desayunos o almuerzos.
+                            </p>
+
+                            <!-- Precio -->
+                            <strong class="field-label">Precio: <span class="product-price">S/ 18.00 por kilo</span></strong>
+
+                            <!-- Botón para separar -->
+                            <div class="product-actions">
+                                <a href="https://wa.me/519XXXXXXX?text=Hola%2C%20quiero%20separar%20un%20queso%20fresco." class="whatsapp-button">
+                                    Separar por WhatsApp
+                                </a>
+                            </div>
+                            
+                        </div>
+                    </div>
+                <!-- Puedes duplicar más cards aquí -->
+                </div>
+            </div>           
+        </div>
+    </section>
+
+    <!--! SECTIONS PRINCIṔAL-->
+
+    <!--! SEGUNDA PARTE -->
+
+  <section class="features">
+    <h3>¿Por qué elegir nuestros productos?</h3>
+    <div class="features-grid">
+      <div class="feature">
+        <div class="benefit-icon">🛡️</div>
+        <h4>Calidad Garantizada</h4>
+        <p>Directo de vacas bien cuidadas, bajo controles sanitarios estrictos.</p>
+      </div>
+      <div class="feature">
+        <div class="benefit-icon">🌱</div>
+        <h4>100% Natural</h4>
+        <p>Sin conservantes ni químicos, solo ingredientes frescos.</p>
+      </div>
+      <div class="feature">
+        <div class="benefit-icon">🚚</div>
+        <h4>Entrega Fresca</h4>
+        <p>Productos del día, directo a tu mesa en óptimas condiciones.</p>
+      </div>
+      <div class="feature">
+        <div class="benefit-icon">👨‍🌾</div>
+        <h4>Origen Andino</h4>
+        <p>Productos elaborados con técnicas tradicionales y sabor auténtico del campo.</p>
+      </div>
+    </div>
+  </section>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+
+
+    <script src="../js/carruseel-general.js"></script>
+    <script src="../js/navbar.js"></script>
+    <script src="../js/menu.js"></script>
+    <script src="../js/imagen-rotate.js"></script>
+    <script src="../js/video.js"></script>
+</body>
+</html>

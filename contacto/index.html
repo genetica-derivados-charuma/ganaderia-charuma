@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Sevillana&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gravitas+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/earlyaccess/parastoo.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/contacto.css">
+    <link rel="stylesheet" href="../css/index.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Sevillana&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+    <title>Document</title>
+</head>
+<body>
+    <nav class="nav-container">
+        <section class="nav">
+            <!-- Logo -->
+            <a href="../" class="logo-link">
+            <img class="logo" src="../images/logoi.png" alt="Logo" />
+            </a>
+
+            <!-- Lista de navegación centrada -->
+            <ul class="nav-ul" id="navMenu">
+                <li><a href="../" class="nav-link">Inicio</a></li>
+                <li><a href="../nosotros/" class="nav-link">Conócenos</a></li>
+                <li><a href="../productos/" class="nav-link">Productos</a></li>
+                <li><a href="../innovacion/" class="nav-link">Recetas</a></li>
+                <li><a href="/contacto/" class="nav-link active">Contacto</a></li>
+            </ul>
+            <!-- Login / Registro / Carrito alineado a la derecha -->
+            <div class="nav-actions">
+                <!-- Perfil con menú desplegable -->
+                <div class="profile-menu">
+                    <button class="profile-btn" aria-label="Perfil">
+                    👤 <span class="arrow-down">▼</span>
+                    </button>
+                    <div class="profile-dropdown">
+                        <a href="./login/" class="nav-link">Iniciar sesión</a>
+                        <a href="./registro/" class="nav-link">Registrarse</a>
+                    </div>
+                </div>
+                <!-- Carrito afuera -->
+                <a href="./carrito/" class="nav-link a carrito-icon">
+                🛒
+                <span class="cart-count">10</span>
+                </a>
+
+            </div>
+
+            <!-- Botón hamburguesa (opcional para móvil) -->
+            <button class="nav-toggle" aria-label="Abrir menú" id="hamburgerBtn">
+                <span class="hamburger"></span>
+            </button>
+        </section>
+    </nav>
+
+    <div id="menuOverlay" class="menu-overlay"></div>
+    <!--! home inicial  -->
+    <section class="hero">
+        <h1 class="hero-title">Contactanos</h1>
+        <div class="hero-text">
+        </div>
+        <div class="cards">
+            <div class="card">
+                <div class="card-icon"><i class="fab fa-facebook-f"></i></div>
+                <p>Únete a nuestra comunidad en Facebook y entérate de todas nuestras novedades.</p>
+                <a href="#">Visitar → </a>
+            </div>
+            <div class="card">
+                <div class="card-icon"><i class="fab fa-tiktok"></i></div>
+                <p>Descubre nuestros videos y contenido exclusivo en TikTok. ¡Síguenos!</p>
+                <a href="#"> Visitar →</a>
+            </div>
+            <div class="card">
+                <div class="card-icon"><i class="fab fa-instagram"></i></i></div>
+                <p>Síguenos en Instagram para ver fotos, promociones y noticias en tiempo real.</p>
+                <a href="#">Visitar →</a>
+            </div>
+        </div>
+    </section>
+
+
+    <!--! sectiones -->
+    <section class="faq-contact-section">
+        <div class="faq-contact-container">
+            <!-- Formulario de contacto -->
+            <div class="contact-form">
+                <h3>Formulario de Contacto</h3>
+                <form>
+                    <label class="form-label" for="name">Nombre </label>
+                    <input type="text" placeholder="Ingrese su nombre" required>
+                    <label class="form-label" for="name">Correo </label>
+                    <input type="email" placeholder="Ingrese su correo" required>
+                    
+                    <div class="form-row">
+                        <div>
+                            <label class="form-label" for="name"> Telefono </label> 
+                            <input type="text" placeholder="Ingrese su telefono" required>
+                        </div>
+                    <div>
+                        <label class="form-label" for="name"> Organizacion / Empresa </label>
+                        <input type="text" placeholder="Nombre de la organizacion" required>
+                    </div>
+
+                    
+                    
+                    </div>
+                    <label class="form-label" for="name">Mensaje </label>
+                    <textarea placeholder="Escriba su mensaje" rows="4" required></textarea>
+                    <div class="form-submit">
+                        <button type="submit">Enviar</button>
+                    </div>
+
+                </form>
+            </div>
+
+            <!--? Preguntas frecuentes -->
+            <div class="faq">
+                <h2>Preguntas Frecuentes</h2>
+                <div class="faq-item open">
+                    <button class="faq-question">What is coffee mate?</button>
+                    <div class="faq-answer">
+                    <p>Coffee Mate is a brand of non-dairy creamers used to enhance the flavor and creaminess of coffee. It is made from water, sugar, vegetable oils, and other ingredients. It is popular for its convenience and long shelf life.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">What are the benefits of coffee mate?</button>
+                    <div class="faq-answer"><p>...</p></div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">Is it safe to drink coffee mate everyday?</button>
+                    <div class="faq-answer"><p>...</p></div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">How will coffee drinks look in 2025?</button>
+                    <div class="faq-answer"><p>...</p></div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">Why and how you should do it?</button>
+                    <div class="faq-answer"><p>...</p></div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">How do community fancy experience?</button>
+                    <div class="faq-answer"><p>...</p></div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </section>
+    <!--! mas info -->
+    <section class="contact-info-section">
+
+        <div class="contact-grid">
+            
+            <!-- Columna izquierda: Información de contacto -->
+            <div class="contact-details">
+                <h2>Información de Contacto</h2>
+                <p class="contact-text">Contáctanos directamente a través de estos medios</p>
+                <ul>
+                    <li><strong>Dirección:</strong><br> San Lorenzo de Quinti, Huarochirí - Lima, Perú</li>
+                    <li><strong>Teléfono:</strong><br> +51 969375429</li>
+                    <li><strong>Correo Electrónico:</strong><br> ganaderiaasunciondecachuy@gmail.com</li>
+                    <li><strong>Horarios de atención:</strong><br>
+                    Lunes a Viernes: 8:00 AM - 6:00 PM<br>
+                    Sábados y domingos: 8:00 AM - 2:00 PM
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Columna derecha: Redes + Cómo llegar en un solo bloque -->
+            <div class="right-block">
+                <!-- Redes sociales -->
+                <div class="social-info">
+                    <h2>Síguenos en Redes Sociales</h2>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+
+                <!-- Cómo llegar -->
+                <div class="location-info">
+                    <h2>¿Cómo llegar?</h2>
+                    <p><strong>Ganadería Asunción de Cachuy</strong><br>
+                    San Lorenzo de Quinti, Huarochirí - Lima</p>
+                    <ul class="directions">
+                        <li>› Desde Lima, tomar la Carretera Central hacia Huarochirí</li>
+                        <li>› Desviar en el km 80 hacia San Lorenzo de Quinti</li>
+                        <li>› Buscar el letrero de "Ganadería Asunción de Cachuy" a la entrada del pueblo</li>
+                    </ul>
+                    <a href="https://www.google.com/maps?q=San+Lorenzo+de+Quinti,+Huarochirí,+Lima" target="_blank" class="btn-maps">Abrir en Google Maps</a>
+                </div>
+            </div>
+                    
+        </div>
+        <!-- Mapa embebido -->
+        <div class="map-container">
+            <iframe
+            src="https://www.google.com/maps?q=San+Lorenzo+de+Quinti,+Huarochirí,+Lima&output=embed"
+            width="100%"
+            height="400"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </section>
+
+    <script src="../js/navbar.js"></script>
+    <script src="../js/menu.js"></script>
+    <script src="./js/faq.js"></script>
+</body>
+</html>
