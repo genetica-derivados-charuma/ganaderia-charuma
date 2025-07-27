@@ -56,14 +56,7 @@
 }
 /*° texto */
 .text-container{
-  background-color: var(--bgc-color-secundario);
-    clip-path: polygon(
-    0 0,           /* top-left */
-    85% 0,         /* top, antes del corte */
-    100% 25%,      /* corte diagonal */
-    100% 100%,     /* bottom-right */
-    0 100%         /* bottom-left */
-  );
+
 }
 .text-container .card-sub-title1{
   font-size: clamp(1.5rem, 2.5vw, 2rem);
@@ -75,7 +68,7 @@
 }
 .text-container .card-title{
   text-transform: uppercase;
-  font-size: clamp(1.5rem, 9vw, 7rem);
+  font-size: clamp(1.5rem, 9vw, 6rem);
   line-height: 0.9;
   font-weight: 900;
   color: white;
@@ -86,14 +79,15 @@
 }
 #description{
   color: white;
-  font-family: 'Michroma', sans-serif;
-  font-size: clamp(1rem, 2.5vw, 1rem);
+  font-family: 'Courgette', cursive;
+  font-size: clamp(1rem, 2.5vw, 1.3rem);
   margin: 1rem ;
   letter-spacing: 0.1rem;
 }
 .about-btn{
   margin-bottom: 1rem;
   margin-left: 1rem;
+  background-color: #000000;
 }
 /*? imagenes en flex */
 .img-container{

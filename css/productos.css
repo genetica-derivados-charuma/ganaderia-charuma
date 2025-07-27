@@ -7,16 +7,24 @@
 }
 .hero {
   position: relative;
-  background: var(--dark);
+  background: url('../images/recetas-perfil.jpg') no-repeat center center/cover;
   color: #fff;
-  height: 70vh;
+  height: 60vh;
   display: flex;
   align-items: flex-end; /* Esto lo pega al fondo */
   padding: 2rem;
   text-align: center;
   justify-content: center;
 }
-
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.493); /* 0.4 = opacidad del fondo */
+  z-index: 0;
+}
 .hero-content {
   display: flex;
   justify-content: space-between;
@@ -42,6 +50,13 @@
 .product-section {
   max-width: 1600px;
   margin: 0 auto;
+}
+.section-title{
+  font-size: clamp(1.5rem, 4vw, 3rem);
+  font-weight: bold;
+  margin-bottom: 1rem;
+  font-family: 'Gravitas One', serif;
+  color: var(--gris);
 }
 .product-row {
   display: grid;
@@ -149,11 +164,11 @@
 
 /* Descripción */
 .product-description {
-  font-size: 0.95rem;
+  font-size: clamp(1.1rem, 1.2vw, 1.3rem);
   color: #000000;
   line-height: 1.5;
   margin-bottom: 0.5rem;
-  font-family: 'Michroma', sans-serif;
+  font-family: 'Courgette', cursive;
   font-weight: bold;
 }
 
@@ -181,31 +196,7 @@
   transition: background-color 0.3s ease;
 }
 
-/* Responsivo */
-@media (max-width: 500px) {
-  .product-card {
-    max-width: 100%;
-    margin: 0 1rem;
-  }
 
-  .product-title {
-    font-size: 1.1rem;
-  }
-
-  .product-price {
-    font-size: 1rem;
-  }
-
-  .product-description,
-  .product-rating {
-    font-size: 0.9rem;
-  }
-
-  .whatsapp-button {
-    width: 100%;
-    text-align: center;
-  }
-}
 
 /*° segunda parte*/
 
@@ -271,5 +262,30 @@ h2, h3 {
   .cta {
     height: auto;
     padding: 40px 20px;
+  }
+}
+/* Responsivo */
+@media (max-width: 500px) {
+  .product-card {
+    max-width: 100%;
+    margin: 0 1rem;
+  }
+
+  .product-title {
+    font-size: 1.1rem;
+  }
+
+  .product-price {
+    font-size: 1rem;
+  }
+
+  .product-description,
+  .product-rating {
+    font-size: 0.9rem;
+  }
+
+  .whatsapp-button {
+    width: 100%;
+    text-align: center;
   }
 }

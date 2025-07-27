@@ -1,21 +1,22 @@
 :root {
-  --bg-color: #014421;
-  --bgc-color-secundario: #08080885;
-  --bgc-secundario: rgb(253, 253, 253);
-  --blanco: #ffffff;
-  --parrafo-verde: #ffffffb9;
-  --black: #000000ce;
-  --gris: #636161;
+  --bg-color: #014421;       /* Fondo principal */
+  --accent-color: #FFB400;   /* Acento para botones o íconos */
+  --secondary-color: #7FC97F; /* Verde lima suave */
+  --text-color: #212121;     /* Texto general */
+  --text-light: #FFFFFF;     /* Texto blanco */
+  --bg-light: #F5F5F5;       /* Fondo claro para secciones */
+  --border-color: #CCCCCC;
+  --parrafo: rgb(73, 73, 73);
 }
 /*! contacto */
 .hero {
-  background: url('../images/contactanos_x4.jpg') no-repeat center center/cover;
-  height: 90vh;
   position: relative;
+  background: url('../images/contactanos_x4.jpg') no-repeat center center/cover;
+  height: 60vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 60px;
+  top: 4rem;
 }
 .hero::before {
   content: "";
@@ -28,15 +29,15 @@
 }
 
 .hero-text {
-  max-width: 500px;
+  margin: 0;
   z-index: 2;
 }
 
 .hero-title {
-  font-size:  7rem;
+  font-size:  clamp(1rem, 10vw, 7rem);
   font-family: 'Gravitas One', cursive;
   color: #fff;
-  z-index: 2;
+  z-index: 7;
   text-align: center;
 }
 .cards {
@@ -53,21 +54,19 @@
 }
 .card {
   background: var(--bgc-color-secundario);
-  padding: 20px;
+  padding: 1rem;
   flex: 1;
   text-align: center;
-  border-radius: 10px;
   backdrop-filter: blur(4px);
 }
 
 .card-icon {
-  font-size: 3em;
-  margin-bottom: 10px;
+  font-size: 2rem;
 }
 .card p {
-  font-size: 0.95em;
+  font-size: clamp(0.4rem, 2.5vw, 1.3rem);
   margin-bottom: 15px;
-  font-family: 'Michroma', sans-serif;
+  font-family: 'Courgette', cursive;
 }
 .card a {
   color: #fff;
@@ -80,22 +79,23 @@
   cursor: pointer;
   text-align: center;
 }
+
 /*! contacto */
 /* Formulario */
 .contact-form {
   flex: 1;
   min-width: 300px;
-  padding: 30px 20px;
+  padding: 0.5rem;
 }
 form {
-  border: 1px solid #fff;
+  border: 2px solid var(--border-color);
   padding: 30px 20px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.123);
 }
 .contact-form h3 {
   font-size: clamp(1.5rem, 2.5vw, 2.5rem);
   margin-bottom: 20px;
-  color: var(--blanco);
+  color: var(--gris);
   font-family: 'Gravitas One', cursive;
 }
 
@@ -104,7 +104,7 @@ form {
 .contact-form textarea {
   width: 100%;
   padding: 1rem;
-  border: none;
+  border: 3px solid var(--border-color);
   margin: 1rem 0;
   background: var(--black);
   font-size: 14px;
@@ -137,7 +137,8 @@ input::placeholder{
 .form-label{
   position: relative;
   color: var(--blanco);
-  font-family: 'Michroma', sans-serif;
+  font-family: 'Courgette', cursive;
+  font-size: clamp(1.5rem, 2.5vw, 1.5rem);
 }
 textarea {
   resize: none;
@@ -152,10 +153,11 @@ textarea::placeholder{
 /*? faq */
 
 .faq-contact-section {
-  background-color: var(--bg-color);
   padding: 6rem 0;
 }
 .faq-contact-container {
+  position: relative;
+  top: 3rem;
   max-width: 1400px;
   margin: 0 auto;
   display: grid;
@@ -167,20 +169,21 @@ textarea::placeholder{
   flex: 1;
   min-width: 300px;
 }
-.faq h2 {
+.faq-title {
   position: relative;
   top: 2rem;
   font-size: clamp(1.5rem, 2.5vw, 2.5rem);
   margin-bottom: 40px;
-  font-family: 'Gravitas One', sans-serif;
+  font-family: 'Gravitas One', cursive;
   color: var(--blanco);
   text-align: end;
 }
+
 .faq-item {
   margin-bottom: 13px;
   overflow: hidden;
-  transition: all 0.3s ease;
-  border: 1px solid #fff;
+  transition: all 0.5s ease;
+  border: 3px solid var(--border-color);
 }
 
 .faq-question {
@@ -189,11 +192,11 @@ textarea::placeholder{
   padding: 15px 20px;
   width: 100%;
   text-align: left;
-  font-size: 1.5rem;
+  font-size: clamp(1.3rem, 2.5vw, 1.5rem);
   font-weight: 600;
   cursor: pointer;
   position: relative;
-  font-family: 'Sevillana', sans-serif;
+  font-family: 'PT Sans Narrow', sans-serif;
   color: var(--blanco);
 }
 
@@ -214,9 +217,9 @@ textarea::placeholder{
 .faq-answer {
   display: none;
   padding: 0 20px 15px;
-  font-size: 14px;
-  color: var(--parrafo-verde);
-  font-family: 'Michroma', sans-serif;
+  font-size: clamp(1.1rem, 2.5vw, 1.2rem);
+  color: var(--parrafo);
+  font-family: 'Courgette', sans-serif;
 }
 
 .faq-item.open .faq-answer {
@@ -224,24 +227,26 @@ textarea::placeholder{
 }
 
 
+
+
 /*! mas info*/
 
 /* Estilo general */
 .contact-info-section {
-  padding: 60px 20px;
+  padding: 3rem 1rem;
   background: #fff;
 }
 
 .contact-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: 1fr 1fr;
   gap: 40px;
   max-width: 1400px;
   margin: 0 auto;
+  padding: 0.5rem;
 }
 .contact-details {
-
-  border-right: 1px solid var(--gris);
+  border-right: 2px solid var(--border-color);
   border-radius: 0px;
 }
 .contact-details  h2 {
@@ -254,17 +259,20 @@ textarea::placeholder{
   text-align: center;
 }
 .contact-details .contact-text {
-  font-size:  1rem;
-  font-family: 'Michroma', sans-serif;
+  font-size:  1.3rem;
+  font-family: 'Courgette', sans-serif;
+  text-align: center;
 }
 .contact-details ul {
   text-align: center;
 }
 .contact-details ul li {
-  font-family: 'Michroma', sans-serif;
+  font-family: 'Courgette', sans-serif;
+  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+  color: var(--parrafo);
 }
 .contact-details ul li strong {
-  font-family: 'Sevillana', sans-serif;
+  font-family: 'PT Sans Narrow', sans-serif;
   font-size: 1.5rem;
   color: var(--gris) 
 }
@@ -301,7 +309,7 @@ textarea::placeholder{
   display: inline-block;
   margin-top: 20px;
   padding: 12px 24px;
-  background: var(--black);
+  background: var(--text-color);
   color: #fff;
   text-decoration: none;
   font-weight: bold;
@@ -322,6 +330,7 @@ textarea::placeholder{
 .social-icons {
   display: flex;
   justify-content: space-around;
+  border: 2px solid var(--border-color);
 }
 
 .social-icons a {
@@ -343,19 +352,49 @@ textarea::placeholder{
 }
 .location-info p {
   font-size:  1rem;
-  font-family: 'Michroma', sans-serif;
+  font-family: 'Courgette', sans-serif;
 }
 .location-info p strong {
-  font-family: 'Sevillana', sans-serif;
-  font-size: 1.5rem;
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-size: clamp(1.2rem, 2.5vw, 1.5rem);
   color: var(--gris) 
 }
 .directions li {
-  font-family: 'Michroma', sans-serif;
-  font-size: 14px;
+  font-family: 'Courgette', sans-serif;
+  font-size: clamp(1.1rem, 2.5vw, 1.2rem);
 }
 /* Mapa */
 .map-container {
   max-width: 1400px;
   margin: 40px auto 0;
+}
+
+@media only screen and (max-width: 768px) {
+  /* Estilos para celulares y tablets pequeñas */
+  .cards{
+    display: none;
+  } 
+  .faq-contact-container {
+    grid-template-columns: 1fr;
+  }
+  .contact-form h3 {
+    text-align: center;
+    color: var(--text-color);
+  }
+  .form-row{
+    grid-template-columns: 1fr;
+  }
+  .faq-title{
+    text-align: center;
+  }
+  .faq-item {
+    margin: 0.5rem;
+  }
+  .contact-grid{
+    grid-template-columns: 1fr;
+    border: none;
+  }
+  .contact-details{
+    border: none;
+  }
 }
