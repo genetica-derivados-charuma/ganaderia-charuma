@@ -17,6 +17,10 @@
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/footer.css">
 
+    <!-- AOS Styles -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 
@@ -60,22 +64,22 @@
 
     <div id="menuOverlay" class="menu-overlay"></div>
     <!--! home inicial  -->
-    <section class="hero">
-        <h1 class="hero-title">Contactanos</h1>
+    <section data-aos="zoom-in" class="hero">
+        <h1 data-aos="zoom-in-right" class="hero-title">Contactanos</h1>
         <div class="hero-text">
         </div>
-        <div class="cards">
-            <div class="card">
+        <div  class="cards">
+            <div data-aos="fade-right" class="card">
                 <div class="card-icon"><i class="fab fa-facebook-f"></i></div>
                 <p>Únete a nuestra comunidad en Facebook y entérate de todas nuestras novedades.</p>
                 <a href="https://web.facebook.com/abelardo.santisteban.9" target="_blank" rel="noopener noreferrer">Visitar <i class="fas fa-arrow-up-right-from-square"></i></a>
             </div>
-            <div class="card">
+            <div data-aos="zoom-in-up" class="card">
                 <div class="card-icon"><i class="fab fa-tiktok"></i></div>
                 <p>Descubre nuestros videos y contenido exclusivo en TikTok. ¡Síguenos!</p>
                 <a href="#"> Visitar <i class="fas fa-arrow-up-right-from-square"></i> </a>
             </div>
-            <div class="card">
+            <div data-aos="fade-left" class="card">
                 <div class="card-icon"><i class="fab fa-instagram"></i></i></div>
                 <p>Síguenos en Instagram para ver fotos, promociones y noticias en tiempo real.</p>
                 <a href="#">Visitar <i class="fas fa-arrow-up-right-from-square"></i></a>
@@ -88,7 +92,7 @@
     <section class="faq-contact-section">
         <div class="faq-contact-container">
             <!-- Formulario de contacto -->
-            <div class="contact-form">
+            <div data-aos="zoom-in-right" class="contact-form">
                 <h3>Formulario de Contacto</h3>
                 <form>
                     <label class="form-label" for="name">Nombre </label>
@@ -118,7 +122,7 @@
             </div>
 
             <!--? Preguntas frecuentes -->
-            <div class="faq">
+            <div data-aos="flip-right" class="faq">
                 <h2 class="faq-title">Preguntas Frecuentes</h2>
 
                 <div class="faq-item open">
@@ -164,7 +168,7 @@
         <div class="contact-grid">
             
             <!-- Columna izquierda: Información de contacto -->
-            <div class="contact-details">
+            <div data-aos="flip-left" class="contact-details">
                 <h2>Información de Contacto</h2>
                 <p class="contact-text">Contáctanos directamente a través de estos medios</p>
                 <ul>
@@ -181,7 +185,7 @@
             <!-- Columna derecha: Redes + Cómo llegar en un solo bloque -->
             <div class="right-block">
                 <!-- Redes sociales -->
-                <div class="social-info">
+                <div data-aos="zoom-in-left" class="social-info">
                     <h2>Síguenos en Redes Sociales</h2>
                     <div class="social-icons">
                         <a href="https://web.facebook.com/abelardo.santisteban.9" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
@@ -191,20 +195,18 @@
                 </div>
 
                 <!-- Cómo llegar -->
-                <div class="location-info">
+                <div data-aos="zoom-in-right" class="location-info">
                     <h2>¿Cómo llegar?</h2>
                     <p><strong>Asociacíon de Ganaderos Charuma de Llambilla</strong><br>
                     Llambilla, Huarochirí - Lima</p>
                     <ul class="directions">
                         <li>› Desde Lima, tomar la Carretera Central rumbo a Huarochirí</li>
-                        <li>› En el km 80, desviar hacia San Lorenzo de Quinti</li>
-                        <li>› Continuar hasta ver el letrero “Ganadería Charuma de Llambilla” a la entrada del pueblo</li>
 
                     </ul>
                     <a class="btn-maps"
                         href="https://www.google.com/maps/search/?api=1&query=-12.09527,-76.24405"
                         target="_blank" rel="noopener noreferrer">
-                        Ver ubicación exacta – Llambilla (Huarochirí)
+                        Ver ubicación en Google Maps
                     </a>
                 </div>
             </div>
@@ -213,6 +215,7 @@
         <!-- Mapa embebido -->
         <div class="map-container">
             <iframe
+            data-aos="zoom-in"
             src="https://www.google.com/maps?q=Llambilla,+Huarochirí,+Lima&output=embed"
             width="100%"
             height="400"
@@ -259,8 +262,21 @@
   </div>
 </footer>
 
+
+
+
     <script src="../js/navbar.js"></script>
     <script src="../js/menu.js"></script>
     <script src="../js/faq-contact.js"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+    AOS.init({
+        duration: 1000,  // duración de la animación
+        once: false,     // si quieres que se repita cuando haces scroll hacia arriba
+        mirror: true     // que también anime cuando haces scroll hacia arriba
+    });
+    </script>
 </body>
 </html>
