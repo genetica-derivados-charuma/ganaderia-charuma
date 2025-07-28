@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./css/inicio.css">
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/general.css">
+    <link rel="stylesheet" href="./css/footer.css">
 
     <link href="https://fonts.googleapis.com/css2?family=Sevillana&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
@@ -26,7 +27,7 @@
     <!-- remixes -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet">
 
-    <title>Charuma-Llambilla</title>
+    <title>inicio - Charuma de Llambilla</title>
 
 </head>
 <body>
@@ -49,24 +50,6 @@
             </ul>
 
             <!-- Login / Registro / Carrito alineado a la derecha -->
-            <div class="nav-actions">
-                <!-- Perfil con menú desplegable -->
-                <div class="profile-menu">
-                    <button class="profile-btn" aria-label="Perfil">
-                    👤 <span class="arrow-down">▼</span>
-                    </button>
-                    <div class="profile-dropdown">
-                        <a href="./login/" class="nav-link">Iniciar sesión</a>
-                        <a href="./registro/" class="nav-link">Registrarse</a>
-                    </div>
-                </div>
-                <!-- Carrito afuera -->
-                <a href="./carrito/" class="nav-link a carrito-icon">
-                🛒
-                <span class="cart-count">10</span>
-                </a>
-
-            </div>
 
             <!-- Botón hamburguesa (opcional para móvil) -->
             <button class="nav-toggle" aria-label="Abrir menú" id="hamburgerBtn">
@@ -86,7 +69,7 @@
               <h2 class="card-sub-title1" id="subtitle"></h2>
               <h1 class="card-title" id="title"></h1>
               <p id="description"></p>
-              <a href="#" class="about-btn">
+              <a href="./contacto/" class="about-btn">
                 Contactanos <i class="fas fa-arrow-up-right-from-square"></i>
               </a>
             </div>
@@ -109,7 +92,7 @@
 
 
     <!--! aliados-->
-
+    <!--
     <section class="section-clientes">
       <div class="section-clientes-title">
         <h3 class="clientes-text">Clientes</h3>
@@ -122,12 +105,12 @@
         <img class="carrusel-img" src="./images/soyvida.webp" alt="aliados">
       </div>
     </section>
-
+-->
     <!--! SECTIONS-->
 <section class="products-section-container">
   <div class="productos-section">
     <h2 class="title">Productos Destacados</h2>
-    <a class="btn-servicio" href="">Ver mas productos <i class="fas fa-arrow-up-right-from-square"></i></a>
+    <a class="btn-servicio" href="../productos/">Ver mas productos <i class="fas fa-arrow-up-right-from-square"></i></a>
   </div>
   <section class="seccion-servicio">
     <div class="contenido-servicio">
@@ -137,28 +120,28 @@
         Elaborado con leche fresca de alta calidad, nuestro queso huarochirano artesanal de 1 kg conserva el auténtico sabor andino. Su textura firme y sabor ligeramente salado lo convierten en el acompañante ideal.
       </p>
       <div class="btn-containerr">
-        <a href="#" class="btn-servicio">Ver Detalles <i class="fas fa-arrow-up-right-from-square"></i></a>
+        <a href="productos/#queso-andino" class="btn-servicio">Ver Detalles <i class="fas fa-arrow-up-right-from-square"></i></a>
       </div>
       
     </div>
 
     <div class="imagen-servicio">
-      <img src="./images/familia.jpg" alt="Casa moderna">
+      <img src="./images/queso-producto.jpeg" alt="Casa moderna">
     </div>
   </section>
 
   <section class="seccion-servicio">
     <div class="imagen-servicio">
-      <img src="./images/familia.jpg" alt="Casa moderna">
+      <img src="./images/leche-producto.jpeg" alt="Casa moderna">
     </div>    
     <div class="contenido-servicio">
       <p class="subtitulo">Frescura y pureza desde nuestra ganadería</p>
       <h2 class="titulo">LECHE FRESCA ARTESANAL</h2>
       <p class="descripcion">
-Nuestra leche fresca artesanal es obtenida diariamente de vacas criadas en un entorno natural y saludable. Sin aditivos ni procesos industriales, conserva todos sus nutrientes, sabor auténtico y textura cremosa.
+        Nuestra leche fresca artesanal es obtenida diariamente de vacas criadas en un entorno natural y saludable. Sin aditivos ni procesos industriales, conserva todos sus nutrientes, sabor auténtico y textura cremosa.
       </p>
       <div class="btn-containerr">
-        <a href="#" class="btn-servicio">Ver Detalles <i class="fas fa-arrow-up-right-from-square"></i></a>
+        <a href="productos/#leche-artesanal" class="btn-servicio">Ver Detalles <i class="fas fa-arrow-up-right-from-square"></i></a>
       </div>
     </div>
 
@@ -177,7 +160,7 @@ Nuestra leche fresca artesanal es obtenida diariamente de vacas criadas en un en
             La Asociación de Ganaderos Charuma de Llambilla es una organización dedicada a la producción y comercialización de leche y queso artesanal de alta calidad. Nos encontramos en la localidad de Llambilla, distrito y provincia de Huarochirí, en la región Lima.
           </p>
 
-          <a href="#" class="about-btn">
+          <a href="nosotros/" class="about-btn">
             Conócenos <i class="fas fa-arrow-up-right-from-square"></i>
           </a>
         </div>
@@ -185,7 +168,7 @@ Nuestra leche fresca artesanal es obtenida diariamente de vacas criadas en un en
 
         <div class="experience-section">
             <div class="card-image-about">
-              <img src="./images/familia.jpg" alt="">
+              <img src="./images/nosotros-perfil.jpg" alt="">
             </div>
         </div>
       </section>
@@ -322,12 +305,40 @@ Nuestra leche fresca artesanal es obtenida diariamente de vacas criadas en un en
   </div>
 </section>
   <!--! aliados estrategicos -->
+   <footer class="footer">
+  <div class="footer-container">
+    
+    <!-- Sobre nosotros -->
+    <div class="footer-section">
+      <h3 class="footer-title">Sobre Nosotros</h3>
+      <p>
+        La Asociación de Ganaderos Charuma de Llambilla se dedica a la producción y venta de leche fresca y queso artesanal de alta calidad. Estamos ubicados en Llambilla, distrito de Huarochirí, Lima. Nuestro compromiso es ofrecer productos naturales, nutritivos y con sabor auténtico del campo.
+      </p>
+    </div>
 
-  <footer>
-    <div>
-      footer
-    </div>    
-  </footer>
+
+
+    <!-- Contacto -->
+    <div class="footer-section">
+      <h3 class="footer-title">Contáctanos</h3>
+      <p>📍 Llambilla, Huarochirí, Lima – Perú</p>
+      <p>📞 +51 993 572 951</p>
+      <p>📧 ag.charuma@gmail.coms</p>
+      <p>🕐 Lunes a Sábado: 8:00 AM – 9:00 PM</p>
+    </div>
+
+    <!-- Redes Sociales -->
+    <div class="footer-section">
+      <h3 class="footer-title">Síguenos</h3>
+      <p class="footer-socials">
+        <a href="https://web.facebook.com/abelardo.santisteban.9">Facebook</a> |
+        <a href="#">Instagram</a> |
+        <a href="#">WhatsApp</a>
+      </p>
+      <p>¡Apoya lo natural, apoya lo nuestro! 🧀🐄</p>
+    </div>
+  </div>
+</footer> 
 
 
     <script src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js"></script>

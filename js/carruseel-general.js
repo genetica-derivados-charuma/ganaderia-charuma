@@ -2,29 +2,29 @@ const cardsData = [
   {
     subtitle: "Del campo a tu vaso",
     title: "GENETICA Y DERIVADOS ALLAHUANCA",
-    desc: "Una empresa especializada en la mejora genética de ganado y en la elaboración de productos lácteos de calidad, con raíces en Allahuanca y compromiso con la producción natural, responsable y sostenible",
-    image: "../images/inicio-5.jpg",
+    desc: "Somos una asociación especializada en la mejora genética de ganado y en la elaboración de productos lácteos de calidad, con raíces en Allahuanca y compromiso con la producción natural, responsable y sostenible",
+    image: "../images/nosotros-perfil.jpg",
     links: ["#", "#"]
   },
   {
     subtitle: "Frescura que Alimenta",
     title: "TRADICIÓN BLANCA NATURAL",
     desc: "Es calidad que se siente en cada sorbo. Fresca, nutritiva y 100% natural, nuestra leche es ideal para quienes buscan sabor auténtico y confianza diaria. Directo del campo a tu mesa, con el estándar que tu familia merece.",
-    image: "../images/inicio-dos.jpg",
+    image: "../images/lecheyqueso.jpg",
     links: ["", "#"]
   },
   {
     subtitle: "Tan pura como el campo",
     title: "LECHE SANA Y NATURAL",
     desc: " Es nuestra promesa de frescura, pureza y bienestar. Elaborada sin aditivos ni conservantes, conserva todo su valor nutritivo para una alimentación equilibrada. Elige una leche que cuida de ti y de tu familia, todos los días.",
-    image: "../images/inicio-tres.jpg",
+    image: "../images/leche.jpg",
     links: ["#", "#"]
   },
   {
-    subtitle: "Auténtica. Fresca. Artesanal",
-    title: "COSECHA LECHERA ARTESANAL",
-    desc: "Representa el verdadero sabor del campo. Nuestra leche es producida con dedicación y procesos cuidadosos que respetan lo natural. Cada envase lleva la frescura y el sabor auténtico de una elaboración artesanal pensada para quienes valoran lo puro y lo real.",
-    image: "../images/inicio-4.webp",
+    subtitle: "Tradicional. Nutritivo. Artesanal",
+    title: "QUESO HUAROCHIRANO ARTESANAL",
+    desc: "Nuestro queso representa la esencia del campo. Elaborado con leche fresca y técnicas tradicionales, cada pieza guarda el sabor auténtico y la textura perfecta de una producción responsable y natural. Ideal para quienes aprecian lo verdadero, lo puro y lo hecho con esmero.",
+    image: "../images/queso.jpg", // asegúrate de tener esta imagen
     links: ["#", "#"]
   }
 ];

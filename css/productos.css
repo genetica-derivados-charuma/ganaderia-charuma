@@ -5,9 +5,12 @@
   --text-dark: #1a1a1a;
   --gris: gray;
 }
+html {
+  scroll-behavior: smooth;
+}
 .hero {
   position: relative;
-  background: url('../images/recetas-perfil.jpg') no-repeat center center/cover;
+  background: url('../images/lecheyqueso.jpg') no-repeat center center/cover;
   color: #fff;
   height: 60vh;
   display: flex;
@@ -287,5 +290,76 @@ h2, h3 {
   .whatsapp-button {
     width: 100%;
     text-align: center;
+  }
+}
+
+
+
+/*!Features*/
+.benefits-section {
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.benefits-section h3 {
+  font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+  margin-bottom: 2rem;
+  font-family: 'Gravitas One', sans-serif;
+  color: var(--gris);
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.benefit-card {
+  padding: 1.5rem;
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  font-family: inherit;
+}
+
+.benefit-card:hover {
+  transform: translateY(-5px);
+}
+.benefit-title{
+  font-size: 1.5rem;
+  font-family: 'Gravitas One', cursive;
+  color: var(--gris);
+}
+.benefit-description{
+  font-size: 1.3rem;
+  font-family: 'Courgette', cursive;
+  padding: 0.5rem 0;
+}
+.benefit-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+/* 📱 Responsividad */
+@media (max-width: 1024px) {
+  .benefits-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .benefits-section h3 {
+    font-size: 1.5rem;
+  }
+
+  .benefit-icon {
+    font-size: 2rem;
   }
 }

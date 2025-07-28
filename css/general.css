@@ -261,3 +261,29 @@
   transform: scale(1.05);
   z-index: 10;
 }
+
+
+@media (max-width: 768px) {
+  .btn-container {
+    display: none;
+  }
+  .text-container{
+    text-align: center;
+  }
+  .img-container{
+    display: none;
+  }
+}
+
+/* Estilos solo para pantallas grandes (desde 1200px) */
+@media (min-width: 1200px) {
+  .btn-container {
+    display: none;
+  }
+  .text-container{
+    text-align: center;
+  }
+  .img-container{
+    display: none;
+  }
+}

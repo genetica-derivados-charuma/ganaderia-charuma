@@ -58,6 +58,8 @@
   padding: 1rem 0;
   gap: 1rem;
 }
+
+
 .contenido-servicio{
   padding: 1rem 0.5rem;
   border: 1px solid var(--gris);
@@ -135,7 +137,14 @@
   margin: 0 auto;
   background-color: #fff;
   }
-
+@media (max-width: 768px) {
+  .seccion-servicio {
+    grid-template-columns: 1fr;
+  }
+  .about-us {
+    grid-template-columns: 1fr;
+  }
+}
   .about-left {
     flex: 1;
   }
