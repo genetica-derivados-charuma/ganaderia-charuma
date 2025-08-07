@@ -1,10 +1,244 @@
  :root {
-    --primary: #014421;
+    --primary: #000000;
     --color-button: #023859;
     --color-text: #a7ebf2;
     --amarillo: #000000;
     --blanco: #ffffff;
     --gris: #636161;
+    --bg-color: #000000;    
+}
+/*! inicio*/  
+
+/*! estilos h2*/
+ .seccion-proyectos {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 1rem;
+  border-radius: 5px;
+}
+.inicio-garantia h2 {
+  font-size: clamp(1rem, 6vw, 2.5rem);
+  padding: 1rem;
+  margin-bottom: 1rem;
+  color: var(--gris);
+  padding-left: 1rem;
+  font-family: 'Gravitas One', cursive;
+  margin: 0 0 0 1rem;
+}
+.inicio-garantia h2 span{
+  font-family:'Gravitas One', cursive;
+  color: var(--titulo-span);
+}
+.nuestra {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  padding: 1rem 0;
+  color: var(--text-parrafo-general);
+  font-weight: 400;
+  text-align: center;
+  font-family: 'Courgette', cursive;
+}
+/* SECCIÓN PROYECTOS GANADEROS */
+.inicio-garantia {
+  text-align: center;
+}
+
+.garantia-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.swiper {
+  padding-bottom: 30px;
+}
+
+.swiper-wrapper {
+  display: flex;
+  align-items: stretch;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+
+.garantia-item {
+  position: relative;
+  border: 2px solid;
+  padding: 1rem;
+  width: 100%;
+  max-width: 100%;
+  min-height: 250px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+  box-sizing: border-box;
+  overflow: hidden;
+    background-color: #000000;
+}
+.swiper-slide.garantia-item::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 10%;
+  width: 160%;
+  height: 60%;
+  transform: rotate(45deg);
+  z-index: 0;
+  opacity: 0.1; /* Puedes ajustar la opacidad o quitarla */
+  pointer-events: none; /* No interfiere con clics */
+  z-index: 9;
+}
+.swiper-slide.garantia-item::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 10%;
+  width: 160%;
+  height: 60%;
+  transform: rotate(45deg);
+  z-index: 0;
+  opacity: 0.1;
+  pointer-events: none;
+}
+.gra-purple{
+  border: 2px solid #fffcfc;
+  box-shadow: 0px 0px 12px 0 #615f5f;
+}
+.gra-purple::after{
+  background-color: #ffffff;
+}
+.gra-purple::before{
+  background-color: #ffffff;
+}
+
+.gra-rosa{
+  border: 2px solid #ffffff;
+  box-shadow: 0px 0px 12px 0 #615f5f;
+}
+.gra-rosa::after{
+  background-color: #ffffff;
+}
+.gra-rosa::before{
+  background-color: #ffffff;
+}
+.gra-cele{
+  border: 2px solid #ffffff;
+  box-shadow: 0px 0px 12px 0 #615f5f;
+}
+.gra-cele::after{
+  background-color: #ffffff;
+}
+.gra-cele::before{
+  background-color: #ffffff;
+}
+
+.valor-h3.green {
+  color: var(--blanco);
+  font-size: 1rem;
+  font-family: 'Gravitas One', cursive;
+}
+
+.valor-h3.orange {
+  color: var(--blanco);
+  font-size: 1rem;
+  font-family: 'Cherry Bomb One', cursive;
+}
+
+.valor-h3.purple {
+  color: var(--blanco);
+  font-size: 1rem;
+  font-family: 'Cherry Bomb One', cursive;
+}
+
+.valor-h3.blue {
+  color: var(--blanco);
+  font-size: 1rem;
+  font-family: 'Cherry Bomb One', cursive;
+}
+
+.valor-h3.pink {
+  color: var(--bg-color-dark);
+  font-size: 1rem;
+  font-family: 'Cherry Bomb One', cursive;
+}
+
+.valor-h3.mora {
+  color: var(--bg-color-dark);
+  font-size: 1rem;
+  font-family: 'Cherry Bomb One', cursive;
+}
+
+.icono {
+  font-size: 2rem;
+}
+
+
+.btn {
+  margin-top: 1rem;
+  background: linear-gradient(to bottom right, #d115c1, #f57ada);
+  color: rgb(255, 255, 255);
+  border: none;
+  padding: 0.6rem 4rem;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  
+}
+
+.garantia-p{
+  font-size:1rem;
+  color: var(--blanco);
+  font-weight: 400;
+  font-family: 'Courgette', cursive;
+  padding-top: 0.5rem;
+}
+
+/* Bolitas de paginación ahora debajo */
+.swiper-pagination {
+  position: relative;
+  margin-top: 3rem; /* espacio más grande para sacarlas bien fuera del carrusel */
+  text-align: center;
+  position: relative;
+}
+
+/* Tamaño y estilo más grande de las bolitas */
+.swiper-pagination-bullet {
+  width: 14px;
+  height: 14px;
+  background: #ffffff !important;
+  opacity: 0.6;
+  margin: 0 8px;
+  border-radius: 50%;
+  transition: all 0.3s;
+  z-index: 4;
+}
+
+.swiper-pagination-bullet-active {
+  background: #0840f8 !important;
+  opacity: 1;
+  width: 16px;
+  height: 16px;
+}
+
+
+
+/* Keyframes para entrada suave */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Sombra sutil en los botones al pasar el mouse */
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
 }
 
 /*! aliados */
@@ -47,18 +281,24 @@
 /*! Productos Destacados principal*/
 .products-section-container {
   position: relative;
-  padding: 1rem;
   padding-bottom: 4rem;
 }
 .seccion-servicio {
-  max-width: 1400px;
+  max-width: 1300px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 2fr;
   padding: 1rem 0;
   gap: 1rem;
 }
-
+.seccion-servicios {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  padding: 1rem 0;
+  gap: 1rem;
+}
 
 .contenido-servicio{
   padding: 1rem 0.5rem;
@@ -88,11 +328,11 @@
 .btn-containerr{
   text-align: center;
 }
-.btn-servicio {
+.btn-serviciobtn {
   display: inline-block;
-  background-color: var(--amarillo);
-  color: #fff;
-  padding: 0.75rem 5.5rem;
+  background-color: var(--blanco) !important;
+  color: #000000 !important;
+  padding: 0.60rem 3.5rem;
   text-decoration: none;
   transition: background-color 0.3s;
   text-align: center;
@@ -103,14 +343,15 @@
 }
 .imagen-servicio img {
   width: 700px;
-  height: 350px;
+  height: 450px;
   object-fit: cover;
+  border-radius: 0;
 }
 
 .productos-section{
-  border: 1px solid var(--blanco);
-  padding: 1rem;
   text-align: center;
+  background-color: #000000;
+  padding: 1rem 0;
 }
 .productos-section .title{
   text-align: center;
@@ -118,24 +359,31 @@
   font-weight: bold;
   margin-bottom: 1rem;
   font-family: 'Gravitas One', serif;
-  color: var(--gris);
+  color: var(--blanco);
+}
+.description-product{
+  color: var(--blanco);
+  margin-bottom: 1rem;
+}
+.btno {
+  background-color: var(--blanco);
 }
 /*! Productos Destacados */
 
 /*! About us*/
 .about-us-container{
-  background-color: #fff;
+  background-color: #000000;
 }
 .about-us {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 3rem;
-  color: #353131;
+  color: #ffffff;
   padding: 4rem;
   font-family: sans-serif;
   max-width: 1400px;
   margin: 0 auto;
-  background-color: #fff;
+  background-color: #000000;
   }
 @media (max-width: 768px) {
   .seccion-servicio {
@@ -154,14 +402,14 @@
     font-weight: bold;
     margin-bottom: 1rem;
     font-family: 'Gravitas One', serif;
-    color: var(--gris);
+    color: var(--blanco);
   }
 .about-subtitle{
   font-size: clamp(1.5rem, 4vw, 1.3rem);
   font-weight: bold;
   margin-bottom: 1rem;
   font-family: 'PT Sans Narrow', sans-serif;
-  color: var(--gris);
+  color: var(--blanco);
 }
   .about-description {
     line-height: 1.6;
@@ -169,11 +417,11 @@
     margin-bottom: 2rem;
     font-family: 'Courgette', cursive;
   }
-  .about-btn {
+  .about-btnn {
     display: inline-block;
-    padding: 0.75rem 5rem;
-    background-color: var(--primary);
-    color: white;
+    padding: 0.60rem 5rem;
+    background-color: var(--blanco);
+    color: rgb(0, 0, 0);
     font-weight: bold;
     text-decoration: none;
     margin-top: 2rem;
@@ -310,27 +558,32 @@
 
 /*! comments section*/
 .seccion-opiniones {
-  padding: 4rem 1rem;
   background-color: #ffffff;
   font-family: 'Segoe UI', sans-serif;
 }
-
+.titulos-opiniones{
+  text-align: center;
+  background-color: #000000;
+  padding: 1rem 0;
+  margin-bottom: 1rem;
+}
 .contenedor-opiniones {
   max-width: 1400px;
   margin: 0 auto;
   text-align: center;
+
 }
 
 .titulo-opiniones {
   font-size: clamp(1.5rem, 2.5vw, 2.5rem);
-  color: var(--gris);
+  color: var(--blanco);
   margin-bottom: 0.5rem;
   font-family: 'Gravitas One', cursive;
 }
 
 .subtitulo-opiniones {
   font-size: 1.3rem;
-  color: #666;
+  color: #ffffff;
   margin-bottom: 2rem;
   font-family: 'Courgette', cursive;
 }
@@ -413,10 +666,23 @@
 }
 
 .titulo-aliados {
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 2.5vw, 2.5rem);
   margin-bottom: 2rem;
-  color: #2a2a2a;
+  color: var(--gris);
   font-weight: bold;
+  font-family: 'Gravitas One', cursive;
+}
+
+.aliados-titles{
+  max-width: 1300px;
+  margin: 0 auto;
+  text-align: center;
+}
+.descripcion-aliados {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+  color: var(--gris);
+  font-family: 'Courgette', cursive;
 }
 
 .carrusel-wrapper {
@@ -429,7 +695,7 @@
 
 .marquee {
   display: flex;
-  animation: scroll 60s linear infinite;
+  animation: scroll 150s linear infinite;
   width: fit-content;
 }
 
@@ -440,7 +706,7 @@
 }
 
 .marquee-content img {
-  height: 100px;
+  height: 150px;
   width: auto;
   transition: transform 0.3s, filter 0.3s;
 }
@@ -465,5 +731,8 @@
   }
   .titulo-aliados {
     font-size: 1.5rem;
+  }
+  .seccion-servicios{
+    grid-template-columns: 1fr;
   }
 }

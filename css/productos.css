@@ -1,6 +1,6 @@
 :root {
-  --primary: #0045d4;
-  --dark: #081744;
+  --primary: #000000;
+  --dark: #000000;
   --light-bg: #f7f9fc;
   --text-dark: #1a1a1a;
   --gris: gray;
@@ -256,6 +256,103 @@ h2, h3 {
 }
 
 
+.new-branch {
+  background-color: #ffffff;
+  color: #fff;
+  font-family: 'Courgette', cursive;
+}
+
+.branch-container {
+  max-width: 1400px;
+  margin: auto;
+  text-align: center;
+  border: 1px solid #000000;
+}
+
+.branch-title h2 {
+  font-family: 'Gravitas One', cursive !important;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.branch-container p {
+  font-size: 18px;
+  line-height: 1.6;
+  font-family: 'Courgette', cursive;
+  margin-bottom: 1rem;
+}
+
+.branch-card {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  margin-top: 30px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+  color: #000;
+}
+
+.branch-card h3 {
+  font-family: 'Gravitas One', cursive;
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #000000;
+}
+
+.branch-card p {
+  margin: 8px 0;
+}
+
+.btn-map {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background-color: #000000;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-map:hover {
+  background-color: #ccc;
+  color: #000;
+}
+
+.map-container {
+  margin-top: 25px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.branch-title{
+  text-align: center;
+  background-color: #000000;
+  padding: 1rem 0;
+}
+.benefit-icon {
+  font-size: 2.5rem;
+  margin: 2rem 0;
+}
+/* Responsivo */
+@media (max-width: 600px) {
+  .branch-card {
+    padding: 20px;
+  }
+
+  .branch-container h2 {
+    font-size: 24px;
+  }
+
+  .branch-card h3 {
+    font-size: 20px;
+  }
+
+  .branch-container p {
+    font-size: 16px;
+  }
+}
+
+
 @media (max-width: 768px) {
   .category-grid, .features-grid {
     flex-direction: column;
@@ -338,10 +435,7 @@ h2, h3 {
   font-family: 'Courgette', cursive;
   padding: 0.5rem 0;
 }
-.benefit-icon {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
+
 
 /* 📱 Responsividad */
 @media (max-width: 1024px) {

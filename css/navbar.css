@@ -1,6 +1,6 @@
 :root {
-  --bg-color: 	#014421;
-  --highlight: #F5C144;
+  --bg-color: 	#000000;
+  --highlight: #000000;
   --bgc-secundario: rgb(253, 253, 253);
 }
 /* Reset básico */
@@ -11,7 +11,7 @@
 }
 
 .nav-container {
-  background:  var(--bg-color);
+  background:  var(--bg-color)!important;
   position: fixed;
   top: 0;
   width: 100%;
@@ -23,6 +23,7 @@
   align-items: center;
   justify-content: space-around;
   margin: auto;
+  background-color: var(--bg-color);
 }
 
 .logo-link .logo {
@@ -104,7 +105,7 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(255, 255, 255, 0.3); /* leve oscurecimiento */
+  background: rgba(255, 255, 255, 0.452); /* leve oscurecimiento */
   z-index: 997; /* debajo del menú (998) */
   display: none;
 }
@@ -120,96 +121,7 @@
 .a{
   font-size: 2rem;
 }
-/*! Perfil */
-.profile-menu {
-  position: relative;
-  display: inline-block;
-}
 
-.profile-btn {
-  background: none;
-  border: none;
-  color: var(--bgc-secundario);
-  font-size: 1.3rem;
-  cursor: pointer;
-  font-family: 'Sevillana', cursive;
-  display: flex;
-  align-items: center;
-  gap: 0.3rem;
-}
-
-.profile-dropdown {
-  display: none;
-  position: absolute;
-  right: 0;
-  top: 2.2rem;
-  background-color: var(--bg-color);
-  border: 1px solid rgba(255,255,255,0.2);
-  border-radius: 0.5rem;
-  padding: 0.5rem 0;
-  min-width: 250px;
-  z-index: 999;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-  text-align: center;
-}
-
-.profile-dropdown a {
-  display: block;
-  padding: 0.5rem 1rem;
-  font-family: 'Sevillana', cursive;
-}
-
-.profile-dropdown a:hover {
-  background-color: rgba(255, 255, 255, 0.9);
-  color: var(--bg-color);
-  transition: 0.1s;
-}
-
-/* Mostrar menú al hacer hover o click */
-.profile-menu:hover .profile-dropdown {
-  display: block;
-}
-
-.arrow-down {
-  font-size: 1.8rem;
-}
-
-.profile-dropdown {
-  display: none;
-  position: absolute;
-  right: 0;
-  top: 2.2rem;
-  background-color: var(--bg-color);
-  border: 1px solid rgba(255,255,255,0.2);
-  border-radius: 0.5rem;
-  padding: 0.5rem 0;
-  min-width: 200px;
-  z-index: 999;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-}
-
-.profile-dropdown.active {
-  display: block;
-}
-/*! carrito*/
-.carrito-icon {
-  position: relative;
-  display: inline-block;
-}
-
-.cart-count {
-  position: absolute;
-  top: -5px;
-  right: -5px;
-  background-color: white; /* color amarillo o el que definas */
-  color: var(--bg-color); /* texto oscuro o blanco, según tu fondo */
-  font-size: 0.75rem;
-  font-weight: bold;
-  padding: 4px;
-  border-radius: 50%;
-  box-shadow: 0 0 0 1px white;
-  line-height: 1;
-}
 /*! RESPONSIVE animado desde el lado izquierdo */
 @media (max-width: 1030px) {
   .nav-toggle {

@@ -1,5 +1,5 @@
 :root {
-  --bg-color: #014421;
+  --bg-color: #000000;
   --bgc-color-secundario: #08080885;
   --bgc-secundario: rgb(253, 253, 253);
 }
@@ -59,7 +59,7 @@
 
 }
 .text-container .card-sub-title1{
-  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-size: clamp(1.2rem, 2.5vw, 2rem);
   padding: 1rem 0.5rem;
   font-family: 'sevillana', cursive;
   color: rgb(255, 255, 255);
